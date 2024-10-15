@@ -14,18 +14,41 @@ export default function Footer() {
 
   return (
     <Container className="md:grid-cols-1">
-      <ContentCard className="flex flex-col">
-        <div className="flex items-center justify-center space-x-2">
-          <span>&copy; {year}</span>
-          <GlowText text="Anh Hoang Nguyen" />
+      <ContentCard className="grid grid-cols-3">
+        <div className="flex flex-col items-center">
+          <div className="flex justify-center items-center space-x-2">
+            <span>&copy; {year}</span>
+            <GlowText text="Anh Hoang Nguyen" />
+          </div>
+          <div>
+            <p>
+              Homepage &mdash;{" "}
+              <Link href={config.owner.repository} className="link">
+                Version 6.0.1
+              </Link>
+            </p>
+          </div>
         </div>
-        <div>
-          <p>
-            Homepage &mdash;{" "}
-            <Link href={config.owner.repository} className="link">
-              Version 6.0.1
-            </Link>
-          </p>
+        <div className="p-2 h-full text-primary/50 text-sm">
+          <p className="text-primary">Links</p>
+          <ul>
+            <li>
+              <a href="/resume">Resume</a>
+            </li>
+            <li>
+              <a href="/services">Services</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div className="p-2 h-full">
+          <ul>
+            <li>
+              <a href="/terms">Terms of Service</a>
+            </li>
+          </ul>
         </div>
       </ContentCard>
     </Container>
