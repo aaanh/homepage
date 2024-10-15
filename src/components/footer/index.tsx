@@ -43,13 +43,13 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div className="p-2 h-full">
+        {/* <div className="p-2 h-full">
           <ul>
             <li>
-              <a href="/terms">Terms of Service</a>
+              <a href="/terms">Finished products</a>
             </li>
           </ul>
-        </div>
+        </div> */}
       </ContentCard>
     </Container>
   );

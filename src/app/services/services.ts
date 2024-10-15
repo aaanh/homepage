@@ -1,19 +1,29 @@
 import { z } from "zod";
 
-const ServiceSchema = z.object({
+export const ServiceSchema = z.object({
   type: z.string(),
   description: z.string(),
-  priceRange: z.enum().,
+  priceRange: z.string(),
 });
 
-type Service = z.infer<typeof ServiceSchema>;
+export type Service = z.infer<typeof ServiceSchema>;
 
 export default function getServices(): Service[] {
   return [
     {
-      type: "Development",
+      type: "Small - Medium Project",
       description: "One-off contractual engagements",
-      priceRange: [200, 500],
+      priceRange: "Starting at $200 up to $2000",
+    },
+    {
+      type: "Long-running Project",
+      description: "Part-time engagements that grow and expand",
+      priceRange: "Starting at $40/hour ",
+    },
+    {
+      type: "Developer",
+      description: "Classic full-time engagements",
+      priceRange: "Starting at $80,0000 per anum excl. bonuses and options",
     },
   ];
 }
