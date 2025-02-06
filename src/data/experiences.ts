@@ -4,10 +4,10 @@ import { Experience, ExperienceSchema } from "./commons";
 export default function getExperiences() {
   const experiences: Experience[] = [
     {
-      organization: "Undisclosed",
+      organization: "Brake",
       link: "https://aaanh.com",
       role: "Software Developer",
-      type: "(Undisclosed organization)",
+      type: "Permanent, Part-time",
       location: "Canada",
       startMonth: 4,
       startYear: 2024,
@@ -24,7 +24,7 @@ export default function getExperiences() {
       location: "Laval, Quebec, Canada",
       startMonth: 1,
       startYear: 2024,
-      endMonth: 5,
+      endMonth: 9,
       endYear: 2024,
       description: ["Distributed microservices and frontend development"],
       skills: [""],
@@ -38,7 +38,7 @@ export default function getExperiences() {
       location: "Montreal, Quebec, Canada",
       startMonth: 1,
       startYear: 2023,
-      endMonth: 5,
+      endMonth: 4,
       endYear: 2023,
       description: [
         "Backend API and Microservices development",
@@ -64,7 +64,7 @@ export default function getExperiences() {
       location: "Montreal, Quebec, Canada",
       startMonth: 1,
       startYear: 2023,
-      endMonth: 5,
+      endMonth: 4,
       endYear: 2023,
       description: ["Now part of Microsoft 🥳"],
       skills: [
@@ -106,32 +106,6 @@ export default function getExperiences() {
       ],
     },
     {
-      organization: "SAC Research Group",
-      link: "https://users.encs.concordia.ca/~sac",
-      role: "Undergraduate Research Assistant",
-      type: "Part-time",
-      location: "Montréal, Québec, Canada",
-      startMonth: 1,
-      startYear: 2020,
-      endYear: 0,
-      description: [
-        "My research activities focus on machine learning platforms, processes, and distributed micro-services.",
-      ],
-      skills: [
-        "MLOps",
-        "DevOps",
-        "Full-stack Development",
-        "Python",
-        "IaaS",
-        "GitOps",
-        "React",
-        "Linux",
-        "Cloud Computing",
-        "TensorFlow",
-        "Powershell",
-      ],
-    },
-    {
       organization: "Genetec",
       link: "https://genetec.com",
       role: "IT Specialist",
@@ -163,7 +137,8 @@ export default function getExperiences() {
       location: "Montréal, Québec, Canada",
       startMonth: 3,
       startYear: 2020,
-      endYear: 0,
+      endMonth: 12,
+      endYear: 2022,
       description: [
         "Troubleshoot user environments on Windows, Linux, macOS, and remote servers.",
         "Address complex hardware, software, and network issues.",
