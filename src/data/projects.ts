@@ -94,7 +94,7 @@ export default function getProjects() {
     {
       title: "Concordia University Speed HPC Manual",
       description:
-        "Develop Latex to HTML build pipeline. Create devcontainer environment for authoring LaTeX and GitHub Actions pipeline for docs deployment.",
+        "Develop Latex to HTML build pipeline. Create devcontainer environment for authoring LaTeX and GitHub Actions pipeline.",
       stack: "LaTeX, Docker, Github Actions, devcontainer, Makefile",
       screenshot: "",
       link_ref: "https://nag-devops.github.io/speed-hpc/",
