@@ -4,13 +4,11 @@ import { ProjectSchema } from "./commons";
 export default function getProjects() {
   const projects = [
     {
-      title: "vsce-artoria-theme",
-      description:
-        "VSCode themes that follow the color palettes of Fate saberfaces and others.",
-      link_ref:
-        "https://marketplace.visualstudio.com/items?itemName=aaanh.artoria-theme",
+      title: "Tailflare UI",
+      description: "Web-based GUI version of Tailflare",
+      link_ref: "https://tailflare.aaanh.app",
       screenshot: "",
-      stack: "Visual Studio Code extension",
+      stack: "Nextjs, TypeScript, Shadcn UI, Tailwindcss",
     },
     {
       title: "Tailflare",
@@ -18,6 +16,14 @@ export default function getProjects() {
       link_ref: "https://pkg.go.dev/github.com/aaanh/tailflare",
       screenshot: "",
       stack: "Golang",
+    },
+    {
+      title: "Reroll.ing",
+      description: "Full-stack gacha (FGO) simulator",
+      link_ref: "https://reroll.ing",
+      screenshot: "",
+      stack:
+        "Nextjs (Frontend), Golang Gin (API server), Python (DataOps), SQLite3, Nginx (Reverse proxy), Cloudflare (DNS, network cache)",
     },
     {
       title: "Simple HTTP server in Rust",
@@ -33,13 +39,15 @@ export default function getProjects() {
       screenshot: "",
       stack: "Rust, TCP",
     },
+
     {
-      title: "Reroll.ing",
-      description: "Full-stack gacha (FGO) simulator",
-      link_ref: "https://reroll.ing",
+      title: "vsce-artoria-theme",
+      description:
+        "VSCode themes that follow the color palettes of Fate saberfaces and others.",
+      link_ref:
+        "https://marketplace.visualstudio.com/items?itemName=aaanh.artoria-theme",
       screenshot: "",
-      stack:
-        "Nextjs (Frontend), Golang Gin (API server), Python (DataOps), SQLite3, Nginx (Reverse proxy), Cloudflare (DNS, network cache)",
+      stack: "Visual Studio Code extension",
     },
     {
       title: "Personal URL Shortener",
