@@ -23,7 +23,7 @@ export async function sendContactMessage(
   body: string,
   sender: string
 ) {
-  const headersObject = headers();
+  const headersObject = await headers();
   const ipAddr = headersObject.get("x-forwarded-for") || "127.0.0.1";
 
   const { success } = await ratelimit.limit(ipAddr);
