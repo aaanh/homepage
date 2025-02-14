@@ -9,7 +9,7 @@ const LensComponent: React.FC<GearLens> = ({
   aperture,
   featureCodes,
 }) => (
-  <div className="">
+  <div className="w-full">
     <div className="flex flex-col space-y-2">
       <div className="font-semibold flex">
         <Camera className="w-6 h-6" />
@@ -20,13 +20,13 @@ const LensComponent: React.FC<GearLens> = ({
       </div>
       <div className="text-muted-foreground">
         <div className="">
-          <Aperture className="inline mr-1" /> Focal Length: {focal}
+          Focal Length: {focal}
         </div>
         <div className="">
-          <Aperture className="inline mr-1" /> Aperture: {aperture}
+          Aperture: {aperture}
         </div>
         <div className="">
-          <Code className="inline mr-1" /> Feature Codes: {featureCodes}
+          Feature Codes: {featureCodes}
         </div>
       </div>
     </div>
