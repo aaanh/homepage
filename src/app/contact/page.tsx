@@ -23,8 +23,9 @@ import Link from "next/link";
 import { LucideArrowLeft } from "lucide-react";
 
 const FormSchema = z.object({
-  subject: z.string({ message: "Subject line is malformed." }),
+  subject: z.string({ message: "Subject line is malformed." }).nonempty(),
   sender: z.string().email({ message: "Invalid e-mail." }),
+  firstName: z.string({ message: "What's your name?" }).nonempty(),
   message: z.string().min(8, {
     message: "E-mail inquiry needs to have content at least 8-character long.",
   }),
@@ -41,20 +42,27 @@ export default function Contact() {
     defaultValues: {
       subject: ``,
       sender: "",
+      firstName: "",
       message: "",
     },
   });
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
-    setIsSending(true);
-    setErrorMsg("Sending inquiry form...");
+    try {
+      setIsSending(true);
+      setErrorMsg("Sending inquiry form...");
 
-    await sendContactMessage(data.subject, data.message, data.sender);
+      await sendContactMessage(data.firstName, data.subject, data.message, data.sender);
 
-    setIsSending(false);
-    setErrorMsg("E-mail sent.");
-
-    router.push("/");
+      setErrorMsg("Message sent successfully!");
+      setTimeout(() => {
+        router.push("/");
+      }, 2000);
+    } catch (error) {
+      setErrorMsg("Failed to send message. Please try again later.");
+    } finally {
+      setIsSending(false);
+    }
   }
 
   return (
@@ -90,6 +98,22 @@ export default function Contact() {
             )}
           />
 
+
+          <FormField
+            disabled={isSending}
+            control={form.control}
+            name="firstName"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Your name</FormLabel>
+                <FormControl>
+                  <Input placeholder="Warren Buffering" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
           <FormField
             disabled={isSending}
             control={form.control}
@@ -104,6 +128,7 @@ export default function Contact() {
               </FormItem>
             )}
           />
+
 
           <FormField
             disabled={isSending}

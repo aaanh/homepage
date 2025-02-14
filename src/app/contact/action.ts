@@ -1,17 +1,14 @@
 "use server";
 
-import { EmailClient, KnownEmailSendStatus } from "@azure/communication-email";
-import { AzureKeyCredential } from "@azure/core-auth";
 import { Ratelimit } from "@upstash/ratelimit";
 import { kv } from "@vercel/kv";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
+import { Resend } from 'resend';
+import { env } from "@/env/server";
+import { EmailTemplate } from "@/components/email-template";
 
-const AZURE_COMM_KEY = new AzureKeyCredential(process.env.AZURE_COMM_KEY ?? "");
-const AZURE_COMM_ENDPOINT = process.env.AZURE_COMM_ENDPOINT ?? "";
-const AZURE_COMM_DEST_ADDR = process.env.AZURE_COMM_DEST_ADDR ?? "";
-const AZURE_COMM_ORIG_ADDR = process.env.AZURE_COMM_ORIG_ADDR ?? "";
-const POLLER_WAIT_TIME = 10;
+const resend = new Resend(env.RESEND_API_KEY);
 
 const ratelimit = new Ratelimit({
   redis: kv,
@@ -19,6 +16,7 @@ const ratelimit = new Ratelimit({
 });
 
 export async function sendContactMessage(
+  firstName: string,
   subject: string,
   body: string,
   sender: string
@@ -29,58 +27,27 @@ export async function sendContactMessage(
   const { success } = await ratelimit.limit(ipAddr);
 
   if (success) {
-    const emailClient = new EmailClient(AZURE_COMM_ENDPOINT, AZURE_COMM_KEY);
     try {
-      const message = {
-        senderAddress: AZURE_COMM_ORIG_ADDR,
-        content: {
-          subject: subject + ` from ${sender}`,
-          plainText: body + `\nTo ${AZURE_COMM_DEST_ADDR}`,
-        },
-        recipients: {
-          to: [
-            {
-              address: AZURE_COMM_DEST_ADDR,
-              displayName: "Anh H. Nguyen",
-            },
-          ],
-        },
-      };
+      const { data, error } = await resend.emails.send({
+        from: 'AAANH <no-reply@business.aaanh.com>',
+        to: [env.DEST_EMAIL],
+        replyTo: sender,
+        subject: `${subject}`,
+        react: EmailTemplate({
+          firstName,
+          sender,
+          subject,
+          body
+        }),
+      });
 
-      const poller = await emailClient.beginSend(message);
-
-      if (!poller.getOperationState().isStarted) {
-        throw "Poller was not started.";
+      if (error) {
+        throw error;
       }
 
-      let timeElapsed = 0;
-      while (!poller.isDone()) {
-        poller.poll();
-        console.log("Email send polling in progress");
-
-        await new Promise((resolve) =>
-          setTimeout(resolve, POLLER_WAIT_TIME * 1000)
-        );
-        timeElapsed += 10;
-
-        if (timeElapsed > 18 * POLLER_WAIT_TIME) {
-          throw "Polling timed out.";
-        }
-      }
-
-      if (poller && poller.getResult()) {
-        if (poller.getResult()?.status === KnownEmailSendStatus.Succeeded) {
-          console.log(
-            `Successfully sent the email (operation id: ${
-              poller.getResult()?.id
-            })`
-          );
-        } else {
-          throw poller.getResult()?.error;
-        }
-      }
+      return { success: true, data };
     } catch (e) {
-      console.log(e);
+      console.error(e);
       throw e;
     }
   } else {

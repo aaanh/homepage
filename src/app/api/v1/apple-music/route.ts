@@ -20,8 +20,8 @@ export async function POST(request: NextRequest) {
 
     try {
       const kvStore = new Redis({
-        url: env.KV_HOMEPAGE_REST_API_URL,
-        token: env.KV_HOMEPAGE_REST_API_TOKEN,
+        url: env.KV_REST_API_URL,
+        token: env.KV_REST_API_TOKEN,
       });
       // Set the latest value in Vercel KV using a specific key
       await kvStore.set("latest", JSON.stringify(nowPlayingData), {

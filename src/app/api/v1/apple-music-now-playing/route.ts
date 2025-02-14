@@ -7,8 +7,8 @@ export async function GET() {
   unstable_noStore();
   try {
     const kvStore = new Redis({
-      url: env.KV_HOMEPAGE_REST_API_URL,
-      token: env.KV_HOMEPAGE_REST_API_TOKEN,
+      url: env.KV_REST_API_URL,
+      token: env.KV_REST_API_TOKEN,
     });
 
     const latestNowPlayingData = await kvStore.get("latest");
