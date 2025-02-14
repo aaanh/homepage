@@ -13,7 +13,7 @@ export function getGears() {
   const { data: computing } = z.array(GearComputingSchema).safeParse([
     {
       brand: "Workstation",
-      model: "Tower",
+      model: "Workstation",
       type: "Desktop",
       cpu: "AMD Ryzen 9 3900X",
       gpu: "Nvidia RTX 3070 Ti 8GB",
@@ -22,7 +22,7 @@ export function getGears() {
     },
     {
       brand: "Server",
-      model: "Tower",
+      model: "Server",
       type: "Desktop",
       cpu: "AMD Ryzen 5 3600",
       gpu: "Nvidia GTX 1080 8GB + nVidia Tesla 24GB",
