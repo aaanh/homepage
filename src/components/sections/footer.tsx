@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-card p-8 pt-24 border-t border-black w-full min-h-[50vh]">
-      <div className="gap-2 grid lg:grid-cols-4 mx-auto divide-x divide-black/50 container">
+      <div className="gap-2 grid lg:grid-cols-4 mx-auto container">
         <div className="gap-2 grid">
           <div className="flex items-center gap-2 bg-black shadow px-4 py-2 rounded-lg w-fit text-white">
             <Image
@@ -18,7 +18,7 @@ export default function Footer() {
           <p>&copy; 2025 Anh Hoang Nguyen, AAANH Corporation</p>
         </div>
         <div>
-          <p className="font-bold">On this site</p>
+          <p className="font-light text-sm uppercase">On this site</p>
           <ul>
             <li>
               <a href="https://aaanh.com">Homepage</a>
@@ -40,7 +40,7 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <p className="font-bold">Socials</p>
+          <p className="font-light text-sm uppercase">Socials</p>
           <ul>
             <li>
               <a href="https://github.com/aaanh" target="_blank">
@@ -60,7 +60,7 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <p className="font-bold">Canonical sites</p>
+          <p className="font-light text-sm uppercase">Canonical sites</p>
           <ul>
             <li>
               <a href="https://tailflare.aaanh.app" target="_blank">

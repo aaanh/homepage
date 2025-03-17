@@ -19,7 +19,7 @@ export default function Education() {
   return (
     <section className="flex flex-col gap-4 p-2">
       <h2
-        className="bg-background/75 backdrop-blur-lg p-2 border dark:border-white border-black w-fit font-mono text-4xl"
+        className="bg-background/75 backdrop-blur-lg p-2 border dark:border-white border-black w-full font-mono text-4xl"
         id="education"
       >
         {"// Education"}

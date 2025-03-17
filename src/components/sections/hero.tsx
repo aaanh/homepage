@@ -19,14 +19,14 @@ export default function Hero() {
       </video>
       <div className="gap-4 grid grid-cols-2 bg-card/75 mt-16 py-4 border dark:border-white border-black divide-x divide-black dark:divide-white w-full">
         <div className="justify-end items-center grid grid-rows-[1fr_1fr] pr-4 text-right">
-          <h1 className="font-bold text-2xl lg:text-4xl">Anh Hoang Nguyen</h1>
-          <p className="h-[2rem] font-mono text-accent text-lg lg:text-2xl">
+          <h1 className="text-2xl lg:text-4xl">Anh Hoang Nguyen</h1>
+          <p className="h-[2rem] font-mono lg:text-2xl">
             <Typewriter
               typeSpeed={25}
               loop={0}
               delaySpeed={1000}
               words={[
-                "Full-Stack Software Developer",
+                "Software Developer",
                 "Infrastructure Developer",
                 "Solutions Architect",
               ]}
