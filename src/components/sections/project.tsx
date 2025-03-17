@@ -23,29 +23,22 @@ export default function Project() {
       >
         {"// Personal Projects"}
       </h2>
-      {/* <div className="flex flex-wrap gap-4"> */}
-      <Carousel className="z-50">
-        <CarouselContent>
-          {projects.map((project, idx) => (
-            <CarouselItem className="basis-1/3" key={project.title + "-" + idx}>
-              <Card
-                className="hover:bg-accent/50 dark:border-accent/75 border-black rounded-none w-[350px] transition-all ease-in-out hover:cursor-pointer"
-                onClick={() => router.push(project.link_ref ?? "#")}
-              >
-                <CardHeader>
-                  <CardTitle>{project.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>{project.stack}</p>
-                </CardContent>
-              </Card>
-            </CarouselItem>
-          ))}
-          <CarouselPrevious className="z-50" />
-          <CarouselNext className="z-50" />
-        </CarouselContent>
-      </Carousel>
-      {/* </div> */}
+      <div className="flex flex-wrap gap-4">
+        {projects.map((project, idx) => (
+          <Card
+            key={project.title + "-" + idx}
+            className="hover:bg-accent/50 dark:border-accent/75 border-black rounded-none w-[350px] transition-all ease-in-out hover:cursor-pointer"
+            onClick={() => router.push(project.link_ref ?? "#")}
+          >
+            <CardHeader>
+              <CardTitle>{project.title}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>{project.stack}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
     </section>
   );
 }
