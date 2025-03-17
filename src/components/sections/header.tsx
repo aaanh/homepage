@@ -28,7 +28,7 @@ export default function Header() {
       <div className="flex justify-between bg-card/40 shadow backdrop-blur-lg p-2 px-8 border rounded-xl w-2xl">
         <Logo />
         <div className="flex gap-2">
-          {/* <ModeToggle /> */}
+          <ModeToggle />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline" className="rounded-none">

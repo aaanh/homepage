@@ -13,7 +13,7 @@ export default function Experience() {
   return (
     <section className="flex flex-col gap-4 p-2">
       <h2
-        className="p-2 border border-black w-fit font-mono text-4xl"
+        className="bg-background/75 backdrop-blur-lg p-2 border dark:border-white border-black w-fit font-mono text-4xl"
         id="experiences"
       >
         {"// Experiences"}
@@ -21,7 +21,7 @@ export default function Experience() {
       <div className="flex flex-wrap gap-4">
         {experiences.map((exp, idx) => (
           <Card
-            className="border-black w-[300px]"
+            className="dark:border-accent/70 border-black w-[300px]"
             key={exp.organization + "-" + idx}
           >
             <CardHeader>

@@ -5,17 +5,17 @@ export default function Hero() {
 
   return (
     <section className="flex flex-col items-center p-2">
-      {/* <video
+      <video
         autoPlay
         loop
         muted
         playsInline
-        className="w-full h-auto object-cover pointer-events-none"
+        className="top-0 -z-20 absolute w-full h-screen object-cover pointer-events-none blur"
       >
         <source src="/hero-movie.mp4" type="video/mp4" />
         Your browser does not support the video tag.
-      </video> */}
-      <div className="gap-4 grid grid-cols-2 mt-16 py-4 border border-black divide-x divide-black w-full">
+      </video>
+      <div className="gap-4 grid grid-cols-2 bg-card/75 mt-16 py-4 border border-black divide-x divide-black w-full">
         <div className="flex flex-col justify-center pr-4 text-right">
           <h1 className="font-bold text-2xl lg:text-4xl">Anh Hoang Nguyen</h1>
           <p className="text-lg lg:text-2xl">Software Developer</p>

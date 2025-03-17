@@ -19,7 +19,7 @@ export default function Education() {
   return (
     <section className="flex flex-col gap-4 p-2">
       <h2
-        className="p-2 border border-black w-fit font-mono text-4xl"
+        className="bg-background/75 backdrop-blur-lg p-2 border dark:border-white border-black w-fit font-mono text-4xl"
         id="education"
       >
         {"// Education"}
@@ -27,7 +27,7 @@ export default function Education() {
       <div className="flex flex-wrap gap-4">
         {educations.map((ed, idx) => (
           <Card
-            className="border-black rounded-none w-[350px] transition-all ease-in-out"
+            className="dark:border-accent/70 border-black rounded-none w-[350px] transition-all ease-in-out"
             key={ed.institution + "-" + idx}
           >
             <CardHeader>

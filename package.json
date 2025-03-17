@@ -28,6 +28,7 @@
     "@vercel/kv": "^2.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "embla-carousel-react": "^8.5.2",
     "highlight.js": "^11.11.1",
     "lucide": "^0.433.0",
     "lucide-react": "^0.482.0",
