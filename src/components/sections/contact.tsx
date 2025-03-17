@@ -33,14 +33,6 @@ export default function Contact() {
         <InstagramLogoIcon />
         <span>Instagram</span>
       </a>
-      <a
-        href="https://instagram.com/aaanhnya"
-        target="_blank"
-        className={cn(buttonVariants({ variant: "secondary", size: "lg" }))}
-      >
-        <InstagramLogoIcon />
-        <span>Instagram</span>
-      </a>
       <Link
         href="/Anh_Hoang_Nguyen_Resume.pdf"
         target="_blank"
