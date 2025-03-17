@@ -67,3 +67,23 @@ export const GeniusSearchResponseSchema = z.object({
     ),
   }),
 });
+
+export type GithubActivity = {
+  id: string;
+  type: string;
+  actor: {
+    id: string;
+    login: string;
+    display_login: string;
+    gravatar_id?: string;
+    url: string;
+    avatar_url: string;
+  };
+  repo: {
+    id: string;
+    name: string;
+    url: string;
+  };
+  public: boolean;
+  created_at: string;
+};
