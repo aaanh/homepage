@@ -63,7 +63,7 @@ export default function SpotifyStatusCard({
         <p className="font-dark text-xs">
           {is_playing ? item?.artists?.[0].name : null}
         </p>
-        <p className="font-dark text-primary/80 w-[172px] overflow-hidden overflow-ellipsis whitespace-nowrap text-xs font-light">
+        <p className="font-dark text-primary/80 w-[172px] overflow-hidden text-ellipsis whitespace-nowrap text-xs font-light">
           {is_playing
             ? "Album: " +
               (item?.album?.name !== undefined ? item.album.name : "Episode")

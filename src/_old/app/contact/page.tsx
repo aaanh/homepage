@@ -58,10 +58,10 @@ export default function Contact() {
   }
 
   return (
-    <main className="flex items-center justify-center min-h-screen flex-col">
+    <main className="flex flex-col justify-center items-center min-h-screen">
       <Link
         href="/"
-        className="flex space-x-2 items-center justify-center group"
+        className="group flex justify-center items-center space-x-2"
       >
         <LucideArrowLeft />
         <span className="group-hover:underline underline-offset-2">
@@ -71,9 +71,9 @@ export default function Contact() {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="w-2/3 space-y-6 flex justify-center flex-col p-8"
+          className="flex flex-col justify-center space-y-6 p-8 w-2/3"
         >
-          <h1 className="text-4xl font-bold">Contact me</h1>
+          <h1 className="font-bold text-4xl">Contact me</h1>
 
           <FormField
             disabled={isSending}

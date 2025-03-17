@@ -1,10 +1,10 @@
 "use client";
 
-import { getSpotifyStatus } from "@/app/(home)/actions";
+import { getSpotifyStatus } from "@/_old/app/(home)/actions";
 import Container from "../container";
 import ContentCard from "../content-card";
 import GlowText from "../glow-text";
-import { Button } from "../ui/button";
+import { Button } from "../../../components/ui/button";
 import Link from "next/link";
 import getConfig from "@/lib/config";
 
@@ -15,7 +15,7 @@ export default function Footer() {
   return (
     <Container className="md:grid-cols-1">
       <ContentCard className="flex flex-col">
-        <div className="flex items-center justify-center space-x-2">
+        <div className="flex justify-center items-center space-x-2">
           <span>&copy; {year}</span>
           <GlowText text="Anh Hoang Nguyen" />
         </div>

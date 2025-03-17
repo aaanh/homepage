@@ -1,0 +1,54 @@
+export default function Hero() {
+  const startDate = new Date("2022-01-01");
+  const endDate = new Date();
+  const years = calculateYearsBetweenDates(startDate, endDate);
+
+  return (
+    <section className="flex flex-col items-center p-2">
+      {/* <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="w-full h-auto object-cover pointer-events-none"
+      >
+        <source src="/hero-movie.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video> */}
+      <div className="gap-4 grid grid-cols-2 mt-16 py-4 border border-black divide-x divide-black w-full">
+        <div className="flex flex-col justify-center pr-4 text-right">
+          <h1 className="font-bold text-2xl lg:text-4xl">Anh Hoang Nguyen</h1>
+          <p className="text-lg lg:text-2xl">Software Developer</p>
+        </div>
+        <div className="flex flex-col justify-center text-left">
+          <p className="text-lg lg:text-2xl">
+            <b>{years}</b> years of experience
+          </p>
+          <p className="text-lg lg:text-2xl">
+            <b>2</b> succesful projects
+          </p>
+          <p className="text-lg lg:text-2xl">
+            <b>3</b> internships
+          </p>
+          <p className="text-lg lg:text-2xl">
+            <b>3</b>
+            <sup>rd</sup> year student
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function calculateYearsBetweenDates(startDate: Date, endDate: Date): number {
+  // Ensure endDate is after startDate
+  if (endDate < startDate) {
+    throw new Error("End date must be after start date");
+  }
+
+  const millisecondsPerYear = 1000 * 60 * 60 * 24 * 365.25; // Account for leap years
+  const diffInMilliseconds = endDate.getTime() - startDate.getTime();
+  const years = diffInMilliseconds / millisecondsPerYear;
+
+  return Math.floor(years); // Use Math.floor to get the whole number of years
+}
