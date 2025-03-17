@@ -2,7 +2,11 @@ import { cn } from "@/lib/utils";
 import GithubIcon from "@/components/assets/github.svg";
 import Image from "next/image";
 import { buttonVariants } from "../ui/button";
-import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import {
+  GitHubLogoIcon,
+  InstagramLogoIcon,
+  LinkedInLogoIcon,
+} from "@radix-ui/react-icons";
 import Link from "next/link";
 import { ScrollIcon, SubscriptIcon } from "lucide-react";
 
@@ -14,7 +18,7 @@ export default function Contact() {
         target="_blank"
         className={cn(buttonVariants({ variant: "secondary", size: "lg" }))}
       >
-        <Image alt="github" src={GithubIcon} width={20} height={20} />
+        <GitHubLogoIcon />
         <span>Github</span>
       </a>
       <a
