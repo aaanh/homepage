@@ -12,12 +12,13 @@ export default function Hero() {
         loop
         muted
         playsInline
-        className="top-0 -z-20 absolute w-full h-screen object-cover pointer-events-none blur"
+        className="top-0 -z-20 fixed w-full h-screen object-cover pointer-events-none blur"
       >
         <source src="/hero-movie.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="gap-4 grid grid-cols-2 bg-card/75 mt-16 py-4 border dark:border-white border-black divide-x divide-black dark:divide-white w-full">
+
+      <div className="gap-4 grid grid-cols-2 bg-card/75 mt-16 py-4 divide-x divide-black dark:divide-white w-full">
         <div className="justify-end items-center grid grid-rows-[1fr_1fr] pr-4 text-right">
           <h1 className="text-2xl lg:text-4xl">Anh Hoang Nguyen</h1>
           <p className="h-[2rem] font-mono lg:text-2xl">

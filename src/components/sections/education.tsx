@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "../ui/card";
 import { getEducations } from "@/data/educations";
+import SectionHeader from "./section-header";
 
 export default function Education() {
   const educations = getEducations();
@@ -18,16 +19,11 @@ export default function Education() {
 
   return (
     <section className="flex flex-col gap-4 p-2">
-      <h2
-        className="bg-background/75 backdrop-blur-lg p-2 border dark:border-white border-black w-full font-mono text-4xl"
-        id="education"
-      >
-        {"// Education"}
-      </h2>
+      <SectionHeader title="Education" />
       <div className="flex flex-wrap gap-4">
         {educations.map((ed, idx) => (
           <Card
-            className="dark:border-accent/70 border-black rounded-none w-[350px] transition-all ease-in-out"
+            className="border-none rounded-none w-[350px] transition-all ease-in-out"
             key={ed.institution + "-" + idx}
           >
             <CardHeader>

@@ -1,3 +1,4 @@
+import CallToAction from "@/components/sections/call-to-action";
 import Contact from "@/components/sections/contact";
 import Education from "@/components/sections/education";
 import Experience from "@/components/sections/experience";
@@ -12,12 +13,13 @@ export default function Home() {
       <div className="mx-auto container">
         <Header />
       </div>
-      <div className="mx-auto mb-8 min-h-screen">
+      <div className="flex flex-col gap-4 mx-auto mb-8 min-h-screen">
         <Hero />
         <Contact />
         <Experience />
         <Project />
         <Education />
+        <CallToAction />
       </div>
       <Footer />
     </>

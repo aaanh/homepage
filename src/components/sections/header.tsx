@@ -25,7 +25,7 @@ export default function Header() {
 
   return (
     <nav className="z-20 fixed flex justify-center items-center mx-auto p-2 container">
-      <div className="flex justify-between bg-card/40 shadow backdrop-blur-lg p-2 px-8 border rounded-xl w-2xl">
+      <div className="flex justify-between bg-card/40 shadow backdrop-blur-lg p-2 px-8 rounded-xl w-2xl">
         <Logo />
         <div className="flex gap-2">
           <ModeToggle />

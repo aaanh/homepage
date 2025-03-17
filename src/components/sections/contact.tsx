@@ -12,7 +12,7 @@ import { ScrollIcon, SubscriptIcon } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section className="flex flex-wrap items-center gap-2 p-2">
+    <section className="flex flex-wrap justify-center items-center gap-2 p-2">
       <a
         href="https://github.com/aaanh"
         target="_blank"
