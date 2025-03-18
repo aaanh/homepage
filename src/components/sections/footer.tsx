@@ -27,13 +27,13 @@ export default async function Footer() {
 
   return (
     <footer className="bg-card p-8 pt-24 w-full min-h-[50vh]">
-      <div className="gap-4 grid lg:grid-cols-5 mx-auto container">
+      <div className="gap-4 grid lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] mx-auto container">
         <div className="gap-2 grid">
           <div className="flex items-center gap-2 bg-black shadow px-4 py-2 rounded-lg w-fit text-white">
             <Image
               src="/logos/aaanh.png"
-              width={80}
-              height={80}
+              width={75}
+              height={75}
               alt="aaanh's logo"
             />
             <span className="text-4xl">AAANH</span>
