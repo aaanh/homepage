@@ -30,15 +30,17 @@ export default function Hero() {
             <b>{years}</b> years of experience
           </p>
           <p className="text-lg lg:text-2xl">
-            <b>2</b> succesful projects
+            <b>3</b>
+            <sup>rd</sup> year student
           </p>
           <p className="text-lg lg:text-2xl">
             <b>3</b> internships
           </p>
           <p className="text-lg lg:text-2xl">
-            <b>3</b>
-            <sup>rd</sup> year student
+            <b>Multiple</b> succesful projects
           </p>
+          
+          
         </div>
       </div>
       <Contact />
