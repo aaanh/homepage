@@ -18,12 +18,12 @@ export default function Education() {
   const year = new Date().getFullYear();
 
   return (
-    <section className="flex flex-col gap-4 p-2">
+    <section className="flex flex-col gap-4 px-4">
       <SectionHeader title="Education" />
       <div className="flex flex-wrap gap-4">
         {educations.map((ed, idx) => (
           <Card
-            className="border-none rounded-none w-[350px] transition-all ease-in-out"
+            className="border-none rounded-none w-full lg:w-[350px] transition-all ease-in-out"
             key={ed.institution + "-" + idx}
           >
             <CardHeader>

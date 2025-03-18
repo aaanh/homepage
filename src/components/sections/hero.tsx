@@ -1,4 +1,6 @@
+import { ChevronDown } from "lucide-react";
 import { Typewriter } from "nextjs-simple-typewriter";
+import Contact from "./contact";
 
 export default function Hero() {
   const startDate = new Date("2022-01-01");
@@ -6,19 +8,8 @@ export default function Hero() {
   const years = calculateYearsBetweenDates(startDate, endDate);
 
   return (
-    <section className="flex flex-col items-center p-2">
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="top-0 -z-20 fixed w-full h-screen object-cover pointer-events-none blur"
-      >
-        <source src="/hero-movie.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <div className="gap-4 grid grid-cols-2 bg-card/75 mt-16 py-4 divide-x divide-black dark:divide-white w-full">
+    <section className="z-20 relative flex flex-col justify-center items-center p-2 h-screen">
+      <div className="gap-4 grid grid-cols-2 bg-card/75 backdrop-blur p-4 py-4 divide-x divide-black dark:divide-white container">
         <div className="justify-end items-center grid grid-rows-[1fr_1fr] pr-4 text-right">
           <h1 className="text-2xl lg:text-4xl">Anh Hoang Nguyen</h1>
           <p className="h-[2rem] font-mono lg:text-2xl">
@@ -49,6 +40,12 @@ export default function Hero() {
             <sup>rd</sup> year student
           </p>
         </div>
+      </div>
+      <Contact />
+
+      <div className="bottom-0 absolute flex flex-col justify-center items-center backdrop-blur p-4 text-background text-4xl">
+        <ChevronDown size={32} />
+        <p>Scroll to learn more</p>
       </div>
     </section>
   );

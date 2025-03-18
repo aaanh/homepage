@@ -45,12 +45,12 @@ export function GithubFeed() {
   }
 
   return (
-    <section className="space-y-6 p-2">
+    <section className="space-y-6 p-2 px-4">
       <div className="flex items-center gap-2">
         <SectionHeader title="GitHub Activities" />
       </div>
       <div className="relative">
-        <div className="space-y-4 p-2 border max-h-[25vh] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700 scrollbar-track-transparent">
+        <div className="space-y-4 p-2 border border-accent max-h-[35vh] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700 scrollbar-track-transparent">
           {activities.map((activity) => (
             <div
               key={activity.id}

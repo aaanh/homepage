@@ -12,11 +12,11 @@ export default function Experience() {
   const experiences = getExperiences();
 
   return (
-    <section className="flex flex-col gap-4 p-2">
+    <section className="flex flex-col gap-4 p-2 px-4">
       <SectionHeader title="Experiences" />
-      <div className="flex flex-wrap justify-between gap-4">
+      <div className="gap-4 grid md:grid-cols-3 lg:grid-cols-4">
         {experiences.map((exp, idx) => (
-          <Card className="w-[300px]" key={exp.organization + "-" + idx}>
+          <Card className="w-full" key={exp.organization + "-" + idx}>
             <CardHeader>
               <CardTitle className="text-2xl">{exp.organization}</CardTitle>
             </CardHeader>
