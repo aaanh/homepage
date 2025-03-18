@@ -30,7 +30,7 @@ export default function ProjectCarousel() {
         <CarouselContent>
           {projects.map((project, idx) => (
             <CarouselItem
-              className="lg:basis-1/3 xl:basis-1/4"
+              className="lg:basis-1/2 xl:basis-1/4"
               key={project.title + "-" + idx}
             >
               <Card
