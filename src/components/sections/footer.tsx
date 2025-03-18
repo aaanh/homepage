@@ -1,10 +1,33 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+} from "@/components/ui/dropdown-menu";
+import { ChevronDown } from "lucide-react";
+import { Badge } from "../ui/badge";
 
-export default function Footer() {
+export default async function Footer() {
+  const latestCommitHash = (
+    await (
+      await fetch("https://api.github.com/repos/aaanh/homepage/commits", {
+        headers: {
+          Accept: "application/vnd.github+json",
+          "X-Github-Api-Version": "2022-11-28",
+        },
+        next: {
+          revalidate: 3600, // Cache for 1 hour
+        },
+      })
+    ).json()
+  )[0].sha.slice(0, 8);
+
   return (
     <footer className="bg-card p-8 pt-24 w-full min-h-[50vh]">
-      <div className="gap-2 grid lg:grid-cols-4 mx-auto container">
+      <div className="gap-4 grid lg:grid-cols-5 mx-auto container">
         <div className="gap-2 grid">
           <div className="flex items-center gap-2 bg-black shadow px-4 py-2 rounded-lg w-fit text-white">
             <Image
@@ -15,7 +38,8 @@ export default function Footer() {
             />
             <span className="text-4xl">AAANH</span>
           </div>
-          <p>&copy; 2025 Anh Hoang Nguyen, AAANH Corporation</p>
+          <p>&copy; 2025 Anh Hoang Nguyen</p>
+          <p>AAANH Corporation</p>
         </div>
         <div>
           <p className="font-light text-sm uppercase">On this site</p>
@@ -80,6 +104,58 @@ export default function Footer() {
             <li>
               <a href="https://blog.aaanh.com" target="_blank">
                 Blog
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p className="font-light text-sm uppercase">Site metadata</p>
+          <ul>
+            <li>
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center gap-1">
+                  Version 7.0.0 <ChevronDown className="w-4 h-4" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuLabel>Previous Versions</DropdownMenuLabel>
+                  <DropdownMenuItem asChild>
+                    <a href="https://v6.aaanh.com" target="_blank">
+                      Version 6
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="https://v5.aaanh.com" target="_blank">
+                      Version 5
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="https://v4.aaanh.com" target="_blank">
+                      Version 4
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="https://v3.aaanh.com" target="_blank">
+                      Version 3
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="https://v2.aaanh.com" target="_blank">
+                      Version 2
+                    </a>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </li>
+            <li>
+              Latest commit hash:{" "}
+              <a
+                href={`https://github.com/aaanh/homepage/commit/${latestCommitHash}`}
+                target="_blank"
+                className="hover:no-underline"
+              >
+                <Badge className="hover:bg-primary font-mono">
+                  {latestCommitHash}
+                </Badge>
               </a>
             </li>
           </ul>
