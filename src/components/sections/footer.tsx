@@ -26,20 +26,21 @@ export default async function Footer() {
   )[0].sha.slice(0, 8);
 
   return (
-    <footer className="bg-card p-8 pt-24 w-full min-h-[50vh]">
+    <footer className="bg-card p-8 pt-24 w-full min-h-screen lg:min-h-[60vh]">
       <div className="gap-4 grid lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] mx-auto container">
         <div className="gap-2 grid">
-          <div className="flex items-center gap-2 border dark:border-neutral-700 bg-black shadow px-4 py-2 rounded-lg w-fit text-white">
+          <div className="flex items-center gap-2 bg-black shadow px-4 py-2 border dark:border-neutral-700 rounded-lg w-fit text-white">
             <Image
               src="/logos/aaanh.png"
-              width={75}
-              height={75}
+              width={50}
+              height={50}
               alt="aaanh's logo"
             />
             <span className="text-4xl">AAANH</span>
           </div>
           <p>&copy; 2025 Anh Hoang Nguyen</p>
           <p>AAANH Corporation</p>
+          <p>All Rights Reserved</p>
         </div>
         <div>
           <p className="font-light text-sm uppercase">On this site</p>

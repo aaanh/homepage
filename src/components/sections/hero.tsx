@@ -1,6 +1,8 @@
 import { ChevronDown } from "lucide-react";
 import { Typewriter } from "nextjs-simple-typewriter";
 import Contact from "./contact";
+import { cn } from "@/lib/utils";
+import { ibmPlexSans } from "@/fonts";
 
 export default function Hero() {
   const startDate = new Date("2022-01-01");
@@ -8,10 +10,15 @@ export default function Hero() {
   const years = calculateYearsBetweenDates(startDate, endDate);
 
   return (
-    <section className="z-20 relative flex flex-col justify-center items-center p-2 h-screen">
-      <div className="gap-4 grid grid-cols-2 bg-card/75 backdrop-blur p-4 py-4 divide-x divide-black dark:divide-white container">
-        <div className="justify-end items-center grid grid-rows-[1fr_1fr] pr-4 text-right">
-          <h1 className="text-2xl lg:text-4xl">Anh Hoang Nguyen</h1>
+    <section
+      className={cn(
+        ibmPlexSans.className,
+        "z-20 relative flex flex-col justify-center items-center p-2 h-screen shadow"
+      )}
+    >
+      <div className="justify-center gap-0 grid lg:grid-cols-2 p-4 lg:p-0 w-full lg:w-fit">
+        <div className="justify-center lg:justify-end items-center grid grid-rows-[1fr_1fr] bg-card/80 backdrop-blur p-4 lg:p-12 min-h-44 text-right">
+          <h1 className="text-4xl lg:text-6xl">Anh Hoang Nguyen</h1>
           <p className="h-[2rem] font-mono lg:text-2xl">
             <Typewriter
               typeSpeed={25}
@@ -25,7 +32,7 @@ export default function Hero() {
             />
           </p>
         </div>
-        <div className="flex flex-col justify-center text-left">
+        <div className="flex flex-col justify-center bg-foreground/80 backdrop-blur p-4 lg:p-12 min-h-44 text-background lg:text-left">
           <p className="text-lg lg:text-2xl">
             <b>{years}</b> years of experience
           </p>
@@ -39,15 +46,19 @@ export default function Hero() {
           <p className="text-lg lg:text-2xl">
             <b>Multiple</b> succesful projects
           </p>
-          
-          
         </div>
       </div>
+      <br />
       <Contact />
 
-      <div className="bottom-0 absolute flex flex-col justify-center items-center backdrop-blur p-4 text-background text-4xl">
-        <ChevronDown size={32} />
-        <p>Scroll to learn more</p>
+      <div className="bottom-0 absolute flex flex-col justify-center items-center backdrop-blur p-4 w-full text-background dark:text-foreground text-4xl">
+        <ChevronDown
+          className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
+          size={32}
+        />
+        <p className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+          Scroll to learn more
+        </p>
       </div>
     </section>
   );

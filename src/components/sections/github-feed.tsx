@@ -50,11 +50,11 @@ export function GithubFeed() {
         <SectionHeader title="GitHub Activities" />
       </div>
       <div className="relative">
-        <div className="space-y-4 p-2 border border-accent max-h-[35vh] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700 scrollbar-track-transparent">
+        <div className="gap-4 space-y-4 grid lg:grid-cols-2 shadow-lg p-4 border border-accent rounded max-h-[35vh] overflow-y-auto scrollbar-thin scrollbar-thumb-accent scrollbar-track-transparent">
           {activities.map((activity) => (
             <div
               key={activity.id}
-              className="flex gap-4 bg-card shadow-sm hover:shadow-md p-4 rounded-lg transition-shadow"
+              className="flex gap-4 bg-card shadow-sm hover:shadow-md p-4 border hover:border-accent border-transparent rounded-lg transition-shadow"
             >
               <Image
                 width={100}
