@@ -23,7 +23,7 @@ export default function Education() {
       <div className="flex flex-wrap gap-4">
         {educations.map((ed, idx) => (
           <Card
-            className="border-none rounded-none w-full lg:w-[350px] transition-all ease-in-out"
+            className="border-none rounded w-full lg:w-[350px] transition-all ease-in-out"
             key={ed.institution + "-" + idx}
           >
             <CardHeader>
