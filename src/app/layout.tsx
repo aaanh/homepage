@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { ThemeProvider } from "../components/theme-provider";
 import "@/styles/globals.css";
 import { geistSans, geistMono } from "@/fonts";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
   title: "AAANH",
@@ -29,6 +29,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         >
           {children}
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
