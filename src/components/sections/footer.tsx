@@ -25,6 +25,8 @@ export default async function Footer() {
     ).json()
   )[0].sha.slice(0, 8);
 
+  const latestVersion = 7;
+
   return (
     <footer className="bg-card p-8 pt-24 w-full min-h-screen lg:min-h-[60vh]">
       <div className="gap-4 grid lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] mx-auto container">
@@ -107,6 +109,11 @@ export default async function Footer() {
                 Blog
               </a>
             </li>
+            <li>
+              <a href="https://photos.aaanh.com" target="_blank">
+                Photography
+              </a>
+            </li>
           </ul>
         </div>
         <div>
@@ -115,39 +122,25 @@ export default async function Footer() {
             <li>
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center gap-1">
-                  Version 7.0.0 <ChevronDown className="w-4 h-4" />
+                  Version {latestVersion}.0.0{" "}
+                  <ChevronDown className="w-4 h-4" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <DropdownMenuLabel>Previous Versions</DropdownMenuLabel>
-                  <DropdownMenuItem asChild>
-                    <a href="https://v6.aaanh.com" target="_blank">
-                      Version 6
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="https://v5.aaanh.com" target="_blank">
-                      Version 5
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="https://v4.aaanh.com" target="_blank">
-                      Version 4
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="https://v3.aaanh.com" target="_blank">
-                      Version 3
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="https://v2.aaanh.com" target="_blank">
-                      Version 2
-                    </a>
-                  </DropdownMenuItem>
+                  {[...Array(latestVersion - 1).keys()].map((version) => (
+                    <DropdownMenuItem key={"v" + (version + 1)} asChild>
+                      <a
+                        href={`https://v${version + 1}.aaanh.com`}
+                        target="_blank"
+                      >
+                        Version {version + 1}
+                      </a>
+                    </DropdownMenuItem>
+                  ))}
                 </DropdownMenuContent>
               </DropdownMenu>
             </li>
-            <li>
+            <li className="flex flex-wrap items-center gap-1">
               Latest commit hash:{" "}
               <a
                 href={`https://github.com/aaanh/homepage/commit/${latestCommitHash}`}
@@ -159,9 +152,7 @@ export default async function Footer() {
                 </Badge>
               </a>
             </li>
-            <li>
-              Look and feel inspired by Nothing &amp; Palantir
-            </li>
+            <li>Design inspired by Nothing &amp; Palantir</li>
           </ul>
         </div>
       </div>

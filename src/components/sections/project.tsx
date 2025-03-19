@@ -1,11 +1,12 @@
 import ProjectCarousel from "./project-carousel";
+import SectionContainer from "./section-container";
 import SectionHeader from "./section-header";
 
 export default function Project() {
   return (
-    <section className="flex flex-col gap-4 p-2 px-4">
+    <SectionContainer>
       <SectionHeader title="Personal Projects" />
       <ProjectCarousel />
-    </section>
+    </SectionContainer>
   );
 }

@@ -10,6 +10,7 @@ import {
 } from "../ui/card";
 import { getEducations } from "@/data/educations";
 import SectionHeader from "./section-header";
+import SectionContainer from "./section-container";
 
 export default function Education() {
   const educations = getEducations();
@@ -18,7 +19,7 @@ export default function Education() {
   const year = new Date().getFullYear();
 
   return (
-    <section className="flex flex-col gap-4 px-4">
+    <SectionContainer>
       <SectionHeader title="Education" />
       <div className="flex flex-wrap gap-4">
         {educations.map((ed, idx) => (
@@ -39,6 +40,6 @@ export default function Education() {
           </Card>
         ))}
       </div>
-    </section>
+    </SectionContainer>
   );
 }
