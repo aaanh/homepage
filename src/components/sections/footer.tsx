@@ -152,7 +152,6 @@ export default async function Footer() {
                 </Badge>
               </a>
             </li>
-            <li>Design inspired by Nothing &amp; Palantir</li>
           </ul>
         </div>
       </div>
