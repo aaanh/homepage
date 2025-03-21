@@ -16,7 +16,10 @@ export default function Contact() {
       <a
         href="https://github.com/aaanh"
         target="_blank"
-        className={cn(buttonVariants({ variant: "secondary", size: "lg" }))}
+        className={cn(
+          buttonVariants({ variant: "secondary", size: "lg" }),
+          "min-w-32"
+        )}
       >
         <GitHubLogoIcon />
         <span>Github</span>
@@ -24,7 +27,10 @@ export default function Contact() {
       <a
         href="https://linkedin.com/in/aaanh"
         target="_blank"
-        className={cn(buttonVariants({ variant: "secondary", size: "lg" }))}
+        className={cn(
+          buttonVariants({ variant: "secondary", size: "lg" }),
+          "min-w-32"
+        )}
       >
         <LinkedInLogoIcon />
         <span>Linkedin</span>
@@ -32,7 +38,10 @@ export default function Contact() {
       <a
         href="https://instagram.com/aaanhnya"
         target="_blank"
-        className={cn(buttonVariants({ variant: "secondary", size: "lg" }))}
+        className={cn(
+          buttonVariants({ variant: "secondary", size: "lg" }),
+          "min-w-32"
+        )}
       >
         <InstagramLogoIcon />
         <span>Instagram</span>
@@ -40,7 +49,10 @@ export default function Contact() {
       <Link
         href="/Anh_Hoang_Nguyen_Resume.pdf"
         target="_blank"
-        className={cn(buttonVariants({ variant: "secondary", size: "lg" }))}
+        className={cn(
+          buttonVariants({ variant: "default", size: "lg" }),
+          "min-w-32"
+        )}
       >
         <ScrollIcon />
         <span>Resume/CV</span>

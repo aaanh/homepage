@@ -16,7 +16,7 @@ export default function Hero() {
         "z-20 relative flex flex-col justify-center items-center p-2 h-screen shadow"
       )}
     >
-      <div className="justify-center gap-0 grid lg:grid-cols-2 p-4 lg:p-0 w-full lg:w-fit">
+      <div className="justify-center gap-0 grid md:grid-cols-2 p-4 lg:p-0 w-full lg:w-fit">
         <div className="justify-center lg:justify-end items-center grid grid-rows-[1fr_1fr] bg-card/80 backdrop-blur p-4 lg:p-12 min-h-44 text-right">
           <h1 className="text-4xl lg:text-6xl">Anh Hoang Nguyen</h1>
           <p className="h-[2rem] font-mono lg:text-2xl">
@@ -51,7 +51,7 @@ export default function Hero() {
       <br />
       <Contact />
 
-      <div className="bottom-0 absolute flex flex-col justify-center items-center backdrop-blur p-4 w-full text-background dark:text-foreground text-4xl">
+      <div className="bottom-4 absolute flex flex-col justify-center items-center backdrop-blur p-4 rounded-lg w-fit text-background dark:text-foreground text-2xl lg:text-4xl">
         <ChevronDown
           className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
           size={32}
