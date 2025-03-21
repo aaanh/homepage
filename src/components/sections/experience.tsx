@@ -6,8 +6,8 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
-import SectionHeader from "./section-header";
-import SectionContainer from "./section-container";
+import SectionHeader from "./common/section-header";
+import SectionContainer from "./common/section-container";
 
 export default function Experience() {
   const experiences = getExperiences();

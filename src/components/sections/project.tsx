@@ -1,6 +1,6 @@
 import ProjectCarousel from "./project-carousel";
-import SectionContainer from "./section-container";
-import SectionHeader from "./section-header";
+import SectionContainer from "./common/section-container";
+import SectionHeader from "./common/section-header";
 
 export default function Project() {
   return (
