@@ -38,7 +38,32 @@ const corsHeaders = {
 
 export default {
 	async scheduled(controller: ScheduledController, env: Env, ctx: ExecutionContext) {
-		console.log('cron processed');
+		const username = env.GITHUB_USERNAME;
+		const kvKey = `github-activity-${username}`;
+
+		const githubUrl = `https://api.github.com/users/${username}/events`;
+		const response = await fetch(githubUrl, {
+			headers: {
+				'User-Agent': 'Cloudflare-Worker',
+				Accept: 'application/vnd.github.v3+json',
+			},
+		});
+
+		if (!response.ok) {
+			console.error('Unable to fetch Github activities');
+		}
+
+		const newData = (await response.json()) as GitHubEvent[];
+		const storedData = ((await env.KV_NAMESPACE.get(kvKey, { type: 'json' })) as GitHubEvent[]) || [];
+
+		// Filter out events that are already stored
+		const storedEventIds = new Set(storedData.map((event: GitHubEvent) => event.id));
+		const uniqueEvents = newData.filter((event: GitHubEvent) => !storedEventIds.has(event.id));
+
+		if (uniqueEvents.length > 0) {
+			// Store the merged data in KV
+			await env.KV_NAMESPACE.put(kvKey, JSON.stringify([...uniqueEvents, ...storedData]));
+		}
 	},
 
 	async fetch(request, env, ctx): Promise<Response> {
