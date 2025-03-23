@@ -1,0 +1,12 @@
+{
+  "hero": {
+    "greeting": "Hi, I'm Anh",
+    "description": "I'm a software engineer"
+  },
+  "nav": {
+    "experience": "Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "contact": "Contact"
+  }
+} 

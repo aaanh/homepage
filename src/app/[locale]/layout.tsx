@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { ThemeProvider } from "../components/theme-provider";
+import { ThemeProvider } from "../../components/theme-provider";
 import "@/styles/globals.css";
 import { geistSans, geistMono } from "@/fonts";
 import { SpeedInsights } from "@vercel/speed-insights/next";

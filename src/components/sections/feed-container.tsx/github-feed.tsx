@@ -1,14 +1,25 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { GithubActivity } from "@/lib/types";
-import { fetchGithubActivities } from "@/app/actions";
+import { GithubActivity, GithubActivityType } from "@/lib/types";
+import { fetchGithubActivities } from "@/app/[locale]/actions";
 import { formatDistanceToNow } from "date-fns";
-import { Github } from "lucide-react";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
-import SectionHeader from "../common/section-header";
-import FeedContainer from ".";
+
+function getActivityDescription(type: GithubActivityType): string {
+  switch (type) {
+    case 'PushEvent':
+      return 'pushed to';
+    case 'DeleteEvent':
+      return 'deleted a branch in';
+    case 'WatchEvent':
+      return 'starred';
+    case 'CreateEvent':
+      return 'created a repository';
+    default:
+      return 'performed some activity in';
+  }
+}
 
 export function GithubFeed() {
   const [activities, setActivities] = useState<GithubActivity[]>([]);
@@ -71,12 +82,12 @@ export function GithubFeed() {
                   <span className="font-medium">{activity.actor.login}</span>
                 </a>
                 <span className="text-[#636e72] dark:text-[#b2bec3]">
-                  {"created "}
-                  {activity.type.replace(/([A-Z])/g, " $1").toLowerCase()}
+                  {getActivityDescription(activity.type)}
                 </span>
-                <span className="text-[#636e72] dark:text-[#b2bec3]">in</span>
                 <a
-                  href={activity.repo.url}
+                  href={activity.repo.url
+                    .replace("api.", "")
+                    .replace("repos/", "")}
                   className="text-[#2d3436] hover:text-accent dark:text-[#e0e5ec] transition-colors"
                 >
                   <span className="font-medium">{activity.repo.name}</span>

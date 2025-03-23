@@ -11,6 +11,8 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import { useRouter } from "next/navigation";
+import LanguageSwitcher from "../language-switcher";
+import { cn } from "@/lib/utils";
 import { ModeToggle } from "../theme-switcher";
 
 export default function Header() {
@@ -21,6 +23,7 @@ export default function Header() {
       <div className="flex justify-between bg-card/40 shadow backdrop-blur mx-auto p-4 rounded-xl container">
         <Logo />
         <div className="flex">
+          <LanguageSwitcher />
           <ModeToggle />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>

@@ -1,4 +1,10 @@
-import { Geist, Geist_Mono, IBM_Plex_Sans } from "next/font/google";
+import {
+  Crimson_Pro,
+  Geist,
+  Geist_Mono,
+  IBM_Plex_Sans,
+  Playfair_Display,
+} from "next/font/google";
 
 export const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,5 +18,15 @@ export const geistMono = Geist_Mono({
 
 export const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
-  weight: ["500", "100"], 
-})
+  weight: ["500", "100"],
+});
+
+export const playfairSerif = Playfair_Display({
+  variable: "--font-playfair-serif",
+  subsets: ["latin"],
+});
+
+export const crimsonSerif = Crimson_Pro({
+  variable: "--font-crimson-serif",
+  subsets: ["latin"],
+});

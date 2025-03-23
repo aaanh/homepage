@@ -4,7 +4,14 @@ import Contact from "./contact";
 import { cn } from "@/lib/utils";
 import { ibmPlexSans } from "@/fonts";
 
-export default function Hero() {
+interface HeroProps {
+  dictionary: {
+    greeting: string;
+    description: string;
+  }
+}
+
+export default function Hero({ dictionary }: HeroProps) {
   const startDate = new Date("2022-01-01");
   const endDate = new Date();
   const years = calculateYearsBetweenDates(startDate, endDate);
@@ -18,7 +25,7 @@ export default function Hero() {
     >
       <div className="justify-center gap-0 grid md:grid-cols-2 p-4 lg:p-0 w-full lg:w-fit">
         <div className="justify-center lg:justify-end items-center grid grid-rows-[1fr_1fr] bg-card/80 backdrop-blur p-4 lg:p-12 min-h-44 text-right">
-          <h1 className="text-4xl lg:text-6xl">Anh Hoang Nguyen</h1>
+          <h1 className="text-4xl lg:text-6xl">{dictionary.greeting}</h1>
           <p className="h-[2rem] font-mono lg:text-2xl">
             <Typewriter
               typeSpeed={25}
