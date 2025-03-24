@@ -1,3 +1,5 @@
+export type GithubActivityType = 'PushEvent' | 'DeleteEvent' | 'WatchEvent' | 'CreateEvent' | string;
+
 export type GithubActivity = {
   id: string;
   type: string;

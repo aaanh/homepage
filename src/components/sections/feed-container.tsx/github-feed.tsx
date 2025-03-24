@@ -1,14 +1,25 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { GithubActivity } from "@/lib/types";
+import { GithubActivity, GithubActivityType } from "@/lib/types";
 import { fetchGithubActivities } from "@/app/actions";
 import { formatDistanceToNow } from "date-fns";
-import { Github } from "lucide-react";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
-import SectionHeader from "../common/section-header";
-import FeedContainer from ".";
+
+function getActivityDescription(type: GithubActivityType): string {
+  switch (type) {
+    case 'PushEvent':
+      return 'pushed to';
+    case 'DeleteEvent':
+      return 'deleted a branch in';
+    case 'WatchEvent':
+      return 'starred';
+    case 'CreateEvent':
+      return 'created a repository';
+    default:
+      return 'performed some activity in';
+  }
+}
 
 export function GithubFeed() {
   const [activities, setActivities] = useState<GithubActivity[]>([]);
@@ -61,7 +72,7 @@ export function GithubFeed() {
               className="shadow-[3px_3px_6px_#bebebe,-3px_-3px_6px_#ffffff] dark:shadow-[3px_3px_6px_#1a1a1a,-3px_-3px_6px_#404040] rounded-full w-10 h-10"
             />
             <div className="flex-1">
-              <div className="flex items-center gap-1">
+              <div className="flex flex-wrap items-center gap-1">
                 <a
                   href={activity.actor.url
                     .replace("api.", "")
@@ -71,13 +82,12 @@ export function GithubFeed() {
                   <span className="font-medium">{activity.actor.login}</span>
                 </a>
                 <span className="text-[#636e72] dark:text-[#b2bec3]">
-                  {"created "}
-                  {activity.type.replace(/([A-Z])/g, " $1").toLowerCase()}
+                  {getActivityDescription(activity.type)}
                 </span>
-                <span className="text-[#636e72] dark:text-[#b2bec3]">in</span>
                 <a
-                  href={activity.repo.url}
+                  href={activity.repo.url.replace("api.", "").replace("repos/", "")}
                   className="text-[#2d3436] hover:text-accent dark:text-[#e0e5ec] transition-colors"
+                  target="_blank"
                 >
                   <span className="font-medium">{activity.repo.name}</span>
                 </a>
