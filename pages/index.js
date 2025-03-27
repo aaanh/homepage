@@ -24,19 +24,14 @@ export default function Splash() {
   const { data, error } = useSWR("/api/spotify", fetcher);
 
   return (
-  <>
-    <div className="w-full h-10 bg-pink-400 absolute flex justify-center items-center text-black">
-      ⚠️ You are viewing an archived version of my homepage which is for posterity&apos;s sake and contains old information. Please visit&nbsp; <a href="https://aaanh.ca">aaanh.ca</a> &nbsp;instead.
-    </div>
     <div className="overflow-hidden font-['Fira_Sans'] w-screen min-h-screen dark:text-white bg-white dark:bg-neutral-900 flex flex-col justify-center items-center transition-all ease-in-out">
       <SEO title="aaanh 👾"></SEO>
-      <div className="relative p-8 flex flex-col flex-wrap justify-center items-center min-h-[80vh] sm:border sm:min-h-[70vh] min-w-[24vw] rounded-md dark:sm:shadow-[8px_8px_0px_1px_rgba(6,182,212,.9)] sm:shadow-[8px_8px_0px_1px_#8b5cf6] dark:border-neutral-600 border-neutral-200 ">
+      <div className="relative p-8 flex flex-col flex-wrap justify-center items-center min-h-[80vh] sm:border sm:min-h-[70vh] min-w-[50vw] rounded-md dark:sm:shadow-[8px_8px_0px_1px_rgba(6,182,212,.9)] sm:shadow-[8px_8px_0px_1px_#8b5cf6] dark:border-neutral-600 border-neutral-200 ">
         <DynamicIndexContent></DynamicIndexContent>
         <div className="mt-4">
           <SpotifyBadge data={data}></SpotifyBadge>
         </div>
       </div>
     </div>
-  </>
   );
 }

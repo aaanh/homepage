@@ -93,17 +93,35 @@ function CloseBtn({ clickEvent }) {
   );
 }
 
-const cmdList = [
-  "cd ~",
-  "wget resume",
-  "cd /etc/contact",
-  "cd /var/experience",
-  "cd /bin/awards",
-  "cd /lib/projects",
-  ":help",
-  "curl -O /uses",
-  "history",
-];
+const COMMANDS = {
+  CONTACT: "cd /etc/contact",
+  HELP: ":help",
+  AWARDS: "cd /bin/awards",
+  EXPERIENCE: "cd /var/experience",
+  PROJECTS: "cd /lib/projects",
+  USES: "curl -O /uses",
+  RESUME: "wget resume",
+  HISTORY: "history",
+  HOME: "cd ~"
+};
+
+const COMMAND_ACTIONS = {
+  [COMMANDS.CONTACT]: { type: 'setContent', payload: 'contact' },
+  [COMMANDS.HELP]: { type: 'setContent', payload: 'help' },
+  [COMMANDS.AWARDS]: { type: 'setContent', payload: 'awards' },
+  [COMMANDS.EXPERIENCE]: { type: 'setContent', payload: 'experience' },
+  [COMMANDS.PROJECTS]: { type: 'setContent', payload: 'projects' },
+  [COMMANDS.USES]: { type: 'navigate', payload: '/uses' },
+  [COMMANDS.RESUME]: { type: 'navigate', payload: '/resume' },
+  [COMMANDS.HISTORY]: { type: 'setContent', payload: 'history' },
+  [COMMANDS.HOME]: { type: 'setContent', payload: 'home' }
+};
+
+const cmdList = Object.values(COMMANDS);
+
+const Prompt = ({ className }) => (
+  <p className={className}>guest@aaanh.home $ </p>
+);
 
 export default function Home() {
   const [cmdHistory, addCmdHistory] = useState([]);
@@ -114,44 +132,41 @@ export default function Home() {
   const [isValidCmd, setValidCmd] = useState(true);
   const router = useRouter();
 
+  const handleCommandAction = (action) => {
+    if (!action) return;
+    
+    switch (action.type) {
+      case 'setContent':
+        setContent(action.payload);
+        break;
+      case 'navigate':
+        router.push(action.payload);
+        break;
+      default:
+        break;
+    }
+  };
+
   const handleCommandInput = (e) => {
     setCommand(e.target.value);
   };
 
   const addHistory = (cmd) => {
+    if (!cmd) return;
     addCmdHistory((oldHistory) => [...oldHistory, cmd]);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log("Command Fired");
-    cmdList.includes(command)
-      ? setValidCmd(true)
-      : setValidCmd(false);
-    addHistory(command);
-    command == "cd /etc/contact"
-      ? setContent("contact")
-      : command == ":help"
-        ? setContent("help")
-        : command == "cd /bin/awards"
-          ? setContent("awards")
-          : command == "cd /var/experience"
-            ? setContent("experience")
-            : command == "cd /lib/projects"
-              ? setContent("projects")
-              : command == "curl -O /uses"
-                ? router.push("/uses")
-                : command === "wget /resume"
-                  ? router.push("/resume")
-                  : command == "history"
-                    ? setContent("history")
-                    : command == "cd ~"
-                      ? setContent("home")
-                      : null;
-    console.log(cmdHistory);
-  };
-  const Prompt = ({ className }) => {
-    return <p className={className}>{"guest@aaanh.home $ "}</p>;
+    
+    const isValid = cmdList.includes(command);
+    setValidCmd(isValid);
+    
+    if (isValid) {
+      addHistory(command);
+      const action = COMMAND_ACTIONS[command];
+      handleCommandAction(action);
+    }
   };
 
   return (
@@ -213,35 +228,24 @@ export default function Home() {
         >
           <div className="flex flex-wrap space-x-4 items-center">
             <Prompt className="text-purple-500 font-bold"></Prompt>
-            <form
-              onSubmit={(e) => {
-                handleSubmit(e);
-              }}
-            >
+            <form onSubmit={handleSubmit}>
               <input
                 list="cmds"
                 className="w-auto border-none text-sky-500 font-bold block px-3 py-2 dark:bg-neutral-900 bg-white border border-slate-300 text-md placeholder-slate-400
-								focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-transparent
-								disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
-								invalid:border-pink-500 invalid:text-pink-600
-								focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-transparent
+                disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+                invalid:border-pink-500 invalid:text-pink-600
+                focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
                 placeholder="try :help & Enter"
                 name="terminal"
-                onChange={(e) => handleCommandInput(e)}
+                onChange={handleCommandInput}
                 autoComplete="off"
-                value={command}
-              ></input>
-              <input type="submit" hidden></input>
+                value={command || ''}
+              />
               <datalist id="cmds">
-                <option value=":help"></option>
-                <option value="cd /bin/awards"></option>
-                <option value="cd /etc/contact"></option>
-                <option value="cd /lib/projects"></option>
-                <option value="cd /var/experience"></option>
-                <option value="cd ~"></option>
-                <option value="curl -O /uses"></option>
-                <option value="wget /resume"></option>
-                <option value="history"></option>
+                {cmdList.map(cmd => (
+                  <option key={cmd} value={cmd} />
+                ))}
               </datalist>
             </form>
             <div className="transition-all ease-in-out">

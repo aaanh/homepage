@@ -5,5 +5,5 @@ const DynamicEmptyContent = dynamic(() =>
 );
 
 export default function Empty() {
-  return <DynamicEmptyContent></DynamicEmptyContent>;
+  return <DynamicEmptyContent />
 }
