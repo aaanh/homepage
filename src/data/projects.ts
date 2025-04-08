@@ -26,6 +26,14 @@ export default function getProjects() {
         "Nextjs (Frontend), Golang Gin (API server), Python (DataOps), SQLite3, Nginx (Reverse proxy), Cloudflare (DNS, network cache)",
     },
     {
+      title: "Command-line maze navigating game",
+      description: "Academic project",
+      screenshot: "",
+      stack: "C#, .NET Core",
+      link_ref:
+        "https://github.com/aaanh/notable-school-work/tree/main/algo-w2025",
+    },
+    {
       title: "Simple HTTP server in Rust",
       description: "",
       link_ref: "https://github.com/aaanh/http-rs",
@@ -61,18 +69,17 @@ export default function getProjects() {
       title: "GPT Playground",
       description:
         "Proof of Concept for chat interface connected to the OpenAI API.",
-      link_ref: "https://gpt.aaanh.app",
+      link_ref: "https://github.com/aaanh/gpt-playground",
       screenshot: "",
       stack:
         "Nextjs, Tailwindcss, DaisyUI, FluentUI, API, middleware, Vercel Edge, Infrastructures, Networking.",
     },
     {
       title: "Script Convenience Store",
-      description:
-        "Scripts that you used before but don't remember how to use.",
+      description: "Scripts that you used before but can't remember",
       link_ref: "https://script.aaanh.app",
       screenshot: "",
-      stack: "Rust::mdbook, CI with GitHub Actions, CD with Vercel.",
+      stack: "Rust, mdbook, CI with GitHub Actions, CD with Vercel.",
     },
 
     {
@@ -87,14 +94,14 @@ export default function getProjects() {
     {
       title: "My Photo Reel",
       description: "Select photographic memoirs",
-      link_ref: "https://photos.aaanh.ca",
+      link_ref: "https://photos.aaanh.com",
       screenshot: "",
       stack: "Nextjs, Tailwindcss, Cloudinary DAM + API, Cloudflare CDN",
     },
     {
       title: "Concordia University Speed HPC Manual",
       description:
-        "Develop Latex to HTML build pipeline. Create devcontainer environment for authoring LaTeX and GitHub Actions pipeline.",
+        "Develop Latex to HTML build pipeline and devcontainer environment for authoring LaTeX and GitHub Actions.",
       stack: "LaTeX, Docker, Github Actions, devcontainer, Makefile",
       screenshot: "",
       link_ref: "https://nag-devops.github.io/speed-hpc/",
@@ -104,7 +111,8 @@ export default function getProjects() {
       description: "Academic project",
       screenshot: "/projects/coen244-demo.png",
       stack: "C++, python, pandas",
-      link_ref: "https://github.com/aaanh/meaningful-graph-traversal",
+      link_ref:
+        "https://github.com/aaanh/notable-school-work/tree/main/oop-w2021",
     },
     {
       title: "Inertial Sensing Lab Teaching Site",
@@ -119,7 +127,8 @@ export default function getProjects() {
       screenshot:
         "https://raw.githubusercontent.com/aaanh/mrca-sim-r/master/results/tmrca.png",
       stack: "R, matplotlib",
-      link_ref: "https://github.com/aaanh/mrca-sim-r",
+      link_ref:
+        "https://github.com/aaanh/notable-school-work/tree/main/stats-w2020",
     },
   ];
 

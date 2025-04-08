@@ -32,22 +32,23 @@ export default function Hero() {
             />
           </p>
         </div>
-        <div className="flex flex-col justify-center bg-foreground/80 backdrop-blur p-4 lg:p-12 min-h-44 text-background lg:text-left">
-          <p className="text-lg lg:text-2xl">
+        <div className="flex flex-col justify-center bg-foreground/80 backdrop-blur p-4 lg:p-12 min-h-44 text-background text-lg lg:text-2xl lg:text-left">
+          <p>
             <b>{years}</b> years of experience
           </p>
-          <p className="text-lg lg:text-2xl">
+          <p>
             <b>3</b>
             <sup>rd</sup> year student
           </p>
-          <p className="text-lg lg:text-2xl">
+          <p>
             <b>3</b> internships
           </p>
-          <p className="text-lg lg:text-2xl">
+          <p>
             <b>Multiple</b> succesful projects
           </p>
         </div>
       </div>
+
       <br />
       <Contact />
 
