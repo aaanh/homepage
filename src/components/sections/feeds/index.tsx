@@ -2,9 +2,10 @@
 
 import { ReactNode, useState } from "react";
 import SectionHeader from "../common/section-header";
-import { GithubFeed } from "./github-feed";
+import { GithubFeed } from "./containers/github-feed";
 import { Button } from "@/components/ui/button";
-import BlogFeed from "./blog-feed";
+import BlogFeed from "./containers/blog-feed";
+import PhotoFeed from "./containers/photo-feed";
 
 export default function FeedContainer() {
   const feeds = [
@@ -15,6 +16,10 @@ export default function FeedContainer() {
     {
       source: "Blog",
       component: <BlogFeed key="blog-feed" />,
+    },
+    {
+      source: "Photos",
+      component: <PhotoFeed key="photo-feed" />,
     },
   ];
 
