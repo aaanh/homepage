@@ -42,7 +42,7 @@ export function GithubFeed() {
 
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center min-h-[200px]">
+      <div className="flex justify-center items-center min-h-[35vh]">
         <div className="border-gray-900 dark:border-white border-b-2 rounded-full w-8 h-8 animate-spin"></div>
       </div>
     );

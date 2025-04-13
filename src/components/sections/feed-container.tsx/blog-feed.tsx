@@ -11,6 +11,7 @@ function limitDescription(desc: string) {
 export default function BlogFeed() {
   const rssUrl = env.NEXT_PUBLIC_BLOG_RSS_FEED_URL;
   const [posts, setPosts] = useState<Post[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   async function getFeed() {
     const res = await (await fetch(rssUrl)).text();
@@ -18,11 +19,20 @@ export default function BlogFeed() {
     const parser = new xml2js.Parser();
     const data = await parser.parseStringPromise(res);
     setPosts(data.rss.channel[0].item);
+    setIsLoading(false);
   }
 
   useEffect(() => {
     getFeed();
   }, []);
+
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center min-h-[35vh]">
+        <div className="border-gray-900 dark:border-white border-b-2 rounded-full w-8 h-8 animate-spin"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="relative">
