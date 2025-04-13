@@ -18,7 +18,7 @@ export default function FeedContainer() {
     },
   ];
 
-  const [currentFeed, setCurrentFeed] = useState(feeds[1]);
+  const [currentFeed, setCurrentFeed] = useState(feeds[0]);
 
   return (
     <section className="space-y-6 p-2 px-4">
