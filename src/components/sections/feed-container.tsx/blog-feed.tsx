@@ -1,0 +1,45 @@
+import { env } from "@/env/client";
+import { Post } from "@/lib/types";
+import { useEffect, useState } from "react";
+import xml2js from "xml2js";
+
+function limitDescription(desc: string) {
+  const words = desc.split(/\s+/);
+  return words.length <= 20 ? desc : words.slice(0, 20).join(" ") + "...";
+}
+
+export default function BlogFeed() {
+  const rssUrl = env.NEXT_PUBLIC_BLOG_RSS_FEED_URL;
+  const [posts, setPosts] = useState<Post[]>([]);
+
+  async function getFeed() {
+    const res = await (await fetch(rssUrl)).text();
+    console.log(res);
+    const parser = new xml2js.Parser();
+    const data = await parser.parseStringPromise(res);
+    setPosts(data.rss.channel[0].item);
+  }
+
+  useEffect(() => {
+    getFeed();
+  }, []);
+
+  return (
+    <div className="relative">
+      <div className="gap-4 space-y-4 grid lg:grid-cols-2 p-4 border-2 border-border/40 rounded-xl max-h-[35vh] overflow-y-auto scrollbar-thin scrollbar-thumb-card scrollbar-track-transparent">
+        {posts.map((post) => (
+          <a
+            href={post.link}
+            className="bg-primary-foreground hover:bg-primary-foreground/50 p-2 min-h-28 transition-all ease-in-out"
+            key={post.title}
+          >
+            <p className="font-bold text-lg">{post.title}</p>
+            <p>
+              {post.description ? limitDescription(post.description[0]) : null}
+            </p>
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+}

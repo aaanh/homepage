@@ -1,4 +1,9 @@
-export type GithubActivityType = 'PushEvent' | 'DeleteEvent' | 'WatchEvent' | 'CreateEvent' | string;
+export type GithubActivityType =
+  | "PushEvent"
+  | "DeleteEvent"
+  | "WatchEvent"
+  | "CreateEvent"
+  | string;
 
 export type GithubActivity = {
   id: string;
@@ -18,4 +23,13 @@ export type GithubActivity = {
   };
   public: boolean;
   created_at: string;
+};
+
+export type Post = {
+  title: string;
+  link: string;
+  guid: string;
+  isPermaLink: boolean;
+  description: string;
+  pubDate: string;
 };

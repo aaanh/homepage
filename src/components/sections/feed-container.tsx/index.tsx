@@ -4,6 +4,7 @@ import { ReactNode, useState } from "react";
 import SectionHeader from "../common/section-header";
 import { GithubFeed } from "./github-feed";
 import { Button } from "@/components/ui/button";
+import BlogFeed from "./blog-feed";
 
 export default function FeedContainer() {
   const feeds = [
@@ -11,9 +12,13 @@ export default function FeedContainer() {
       source: "Github",
       component: <GithubFeed key="github-activity" />,
     },
+    {
+      source: "Blog",
+      component: <BlogFeed key="blog-feed" />,
+    },
   ];
 
-  const [currentFeed, setCurrentFeed] = useState(feeds[0]);
+  const [currentFeed, setCurrentFeed] = useState(feeds[1]);
 
   return (
     <section className="space-y-6 p-2 px-4">
