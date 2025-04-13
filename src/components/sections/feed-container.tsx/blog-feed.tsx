@@ -26,11 +26,11 @@ export default function BlogFeed() {
 
   return (
     <div className="relative">
-      <div className="gap-4 space-y-4 grid lg:grid-cols-2 p-4 border-2 border-border/40 rounded-xl max-h-[35vh] overflow-y-auto scrollbar-thin scrollbar-thumb-card scrollbar-track-transparent">
-        {posts.map((post) => (
+      <div className="gap-4 space-y-4 grid lg:grid-cols-2 p-4 border border-foreground rounded-xl max-h-[35vh] overflow-y-auto scrollbar-thin scrollbar-thumb-card scrollbar-track-transparent scrollbar-thumb-green-500">
+        {posts.map((post: Post) => (
           <a
             href={post.link}
-            className="bg-primary-foreground hover:bg-primary-foreground/50 p-2 min-h-28 transition-all ease-in-out"
+            className="bg-primary hover:bg-primary/75 p-2 min-h-28 text-background transition-all ease-in-out"
             key={post.title}
           >
             <p className="font-bold text-lg">{post.title}</p>

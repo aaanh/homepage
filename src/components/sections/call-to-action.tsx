@@ -11,7 +11,7 @@ export default function CallToAction() {
       </a>
       <a
         href="mailto:anhnguyen@aaanh.com?subject=Open role opportunity&body=Please let me know the role type, responsibilities, the department, your company, location, and salary range."
-        className="flex justify-center items-center bg-foreground/70 hover:bg-accent/90 backdrop-blur-2xl p-4 h-[200px] text-card text-4xl text-center transition-all ease-in-out"
+        className="flex justify-center items-center bg-foreground/90 hover:bg-accent/90 backdrop-blur-2xl p-4 h-[200px] text-card text-4xl text-center transition-all ease-in-out"
       >
         Add a high-performer to your team <ArrowRightIcon size={60} />
       </a>

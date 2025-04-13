@@ -58,18 +58,18 @@ export function GithubFeed() {
 
   return (
     <div className="relative">
-      <div className="gap-4 space-y-4 grid lg:grid-cols-2 p-4 border-2 border-border/40 rounded-xl max-h-[35vh] overflow-y-auto scrollbar-thin scrollbar-thumb-card scrollbar-track-transparent">
+      <div className="gap-4 space-y-4 grid lg:grid-cols-2 p-4 border border-foreground rounded-xl max-h-[35vh] overflow-y-auto scrollbar-thin scrollbar-thumb-card scrollbar-track-transparent scrollbar-thumb-green-500">
         {activities.map((activity) => (
           <div
             key={activity.id}
-            className="flex gap-4 p-4 border border-border/20 transition-all duration-300"
+            className="flex gap-4 bg-foreground/90 p-4 text-background transition-all duration-300"
           >
             <Image
               width={100}
               height={100}
               src={activity.actor.avatar_url}
               alt={activity.actor.login}
-              className="shadow-[3px_3px_6px_#bebebe,-3px_-3px_6px_#ffffff] dark:shadow-[3px_3px_6px_#1a1a1a,-3px_-3px_6px_#404040] rounded-full w-10 h-10"
+              className="p-1 border border-background rounded-full w-10 h-10"
             />
             <div className="flex-1">
               <div className="flex flex-wrap items-center gap-1">
@@ -81,7 +81,7 @@ export function GithubFeed() {
                 >
                   <span className="font-medium">{activity.actor.login}</span>
                 </a>
-                <span className="text-foreground/50">
+                <span className="text-background/50">
                   {getActivityDescription(activity.type)}
                 </span>
                 <a
@@ -94,7 +94,7 @@ export function GithubFeed() {
                   <span className="font-medium">{activity.repo.name}</span>
                 </a>
               </div>
-              <div className="mt-1 text-[#636e72] dark:text-[#b2bec3] text-sm">
+              <div className="mt-1 text-sm">
                 {formatDistanceToNow(new Date(activity.created_at), {
                   addSuffix: true,
                 })}
