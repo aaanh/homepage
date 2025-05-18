@@ -207,6 +207,42 @@
 
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+  .eva {
+    /* font-family: 'Evangelion', 'Geist Sans', 'sans-serif'; */
+    --background: 243 30% 8%; /* #15131f, much darker purple */
+    --foreground: 96 70% 65%; /* #aaff66, brighter neon green */
+    --card: 271 70% 70%; /* #b299f7, lighter vibrant purple */
+    --card-foreground: 243 30% 8%; /* #15131f, dark for contrast */
+    --popover: 267 40% 25%; /* #3d2e4d, deeper popover */
+    --popover-foreground: 96 70% 65%; /* #aaff66, neon green */
+    --primary: 271 80% 75%; /* #c7aaff, even lighter purple */
+    --primary-foreground: 96 80% 70%; /* #bfff80, brightest green */
+    --secondary: 144 40% 40%; /* #4fa36d, more vivid green */
+    --secondary-foreground: 96 80% 70%; /* #bfff80, brightest green */
+    --muted: 243 30% 8%; /* #15131f, muted bg */
+    --muted-foreground: 271 80% 75%; /* #c7aaff, light purple */
+    --accent: 96 80% 70%; /* #bfff80, brightest green */
+    --accent-foreground: 243 30% 8%; /* #15131f, dark bg */
+    --destructive: 0 100% 40%; /* #cc0000, bright red */
+    --destructive-foreground: 0 0% 100%; /* #fff, white */
+    --border: 96 80% 70%; /* #bfff80, neon border */
+    --input: 271 70% 70%; /* #b299f7, purple input */
+    --ring: 96 80% 70%; /* #bfff80, neon ring */
+    --chart-1: 96 80% 70%; /* #bfff80 */
+    --chart-2: 271 80% 75%; /* #c7aaff */
+    --chart-3: 267 40% 25%; /* #3d2e4d */
+    --chart-4: 144 40% 40%; /* #4fa36d */
+    --chart-5: 0 100% 40%; /* #cc0000 */
+    --radius: 0.25rem;
+    --sidebar-background: 243 30% 8%; /* #15131f, dark sidebar */
+    --sidebar-foreground: 96 80% 70%; /* #bfff80, neon green */
+    --sidebar-primary: 271 80% 75%; /* #c7aaff, light purple */
+    --sidebar-primary-foreground: 243 30% 8%; /* #15131f */
+    --sidebar-accent: 96 80% 70%; /* #bfff80, neon accent */
+    --sidebar-accent-foreground: 243 30% 8%; /* #15131f */
+    --sidebar-border: 96 80% 70%; /* #bfff80, neon border */
+    --sidebar-ring: 271 80% 75%; /* #c7aaff, light purple */
+  }
 }
 
 @layer base {
@@ -222,4 +258,19 @@
       @apply text-accent underline underline-offset-2;
     }
   }
+}
+
+@font-face {
+  font-family: "Evangelion";
+  src: url("./evangelion-font/EPGYOSHO.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Evangelion";
+  src: url("./evangelion-font/EPGYOBLD.TTF") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }

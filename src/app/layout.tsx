@@ -11,19 +11,14 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className="light"
-      style={{ colorScheme: "light" }}
-    >
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`min-h-screen antialiased ${geistSans.variable} ${geistMono.variable}
         `}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >

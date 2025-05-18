@@ -28,7 +28,7 @@ export default async function Footer() {
   const latestVersion = 7;
 
   return (
-    <footer className="bg-card p-8 pt-24 w-full min-h-screen lg:min-h-[60vh]">
+    <footer className="bg-card p-8 pt-24 w-full min-h-screen lg:min-h-[60vh] text-card-foreground">
       <div className="gap-4 grid lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] mx-auto container">
         <div className="gap-2 grid">
           <div className="flex items-center gap-2 bg-black shadow px-4 py-2 border dark:border-neutral-700 rounded-lg w-fit text-white">
