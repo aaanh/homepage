@@ -4,8 +4,20 @@ import { Experience, ExperienceSchema } from "./commons";
 export default function getExperiences() {
   const experiences: Experience[] = [
     {
+      organization: "Ericsson",
+      link: "https://ericsson.com",
+      role: "Software Developer",
+      type: "Internship, Full-time",
+      location: "Canada",
+      startMonth: 5,
+      startYear: 2025,
+      endYear: 0,
+      description: ["Eclipse-based low-level tracing exploration toolset"],
+      skills: ["Java", "Maven"],
+    },
+    {
       organization: "Brake",
-      link: "https://aaanh.com",
+      link: "https://wbrake.com",
       role: "Software Developer",
       type: "Permanent, Part-time",
       location: "Canada",
@@ -19,7 +31,6 @@ export default function getExperiences() {
       organization: "SimWell",
       link: "https://simwell.io",
       role: "Simulation Software Consultant",
-      // team: "Core Technology R&D, Fabric",
       type: "Contract, Part-time",
       location: "Laval, Quebec, Canada",
       startMonth: 1,
