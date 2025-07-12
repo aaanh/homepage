@@ -4,6 +4,13 @@ import { ProjectSchema } from "./commons";
 export default function getProjects() {
   const projects = [
     {
+      title: "Loisirs Montreal Helper",
+      description: "A faster way to search loisirs Montreal",
+      link_ref: "https://loisirs-mtl-helper.aaanh.app",
+      screenshot: "",
+      stack: "Nextjs, TypeScript, Shadcn UI, Tailwindcss",
+    },
+    {
       title: "Tailflare UI",
       description: "Web-based GUI version of Tailflare",
       link_ref: "https://tailflare.aaanh.app",
