@@ -223,4 +223,8 @@
       @apply text-accent underline underline-offset-2;
     }
   }
+
+  button {
+    @apply hover:cursor-pointer;
+  }
 }

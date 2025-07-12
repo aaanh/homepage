@@ -39,7 +39,7 @@ export default function PhotoFeed() {
 
   return (
     <div className="relative">
-      <div className="gap-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4 border border-foreground rounded-xl max-h-[35vh] overflow-y-auto scrollbar-thin scrollbar-thumb-card scrollbar-track-transparent scrollbar-thumb-green-500">
+      <div className="gap-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4 border border-foreground rounded-xl max-h-[50vh] overflow-y-auto scrollbar-thin scrollbar-thumb-card scrollbar-track-transparent scrollbar-thumb-green-500">
         <div className="flex items-center justify-center bg-accent/50 text-2xl font-mono">Year::2025</div>
         {photos.map((photo) => (
           <div

@@ -5,6 +5,19 @@ export type GithubActivityType =
   | "CreateEvent"
   | string;
 
+export type GithubCommitAuthor = {
+  email: string,
+  name: string
+}
+
+export type GithubCommit = {
+  sha: string,
+  author: GithubCommitAuthor,
+  message: string,
+  distinct: boolean,
+  url: string
+}
+
 export type GithubActivity = {
   id: string;
   type: string;
@@ -21,6 +34,9 @@ export type GithubActivity = {
     name: string;
     url: string;
   };
+  payload: {
+    commits: GithubCommit[]
+  },
   public: boolean;
   created_at: string;
 };

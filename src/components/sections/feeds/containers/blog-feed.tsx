@@ -36,7 +36,7 @@ export default function BlogFeed() {
 
   return (
     <div className="relative">
-      <div className="gap-4 space-y-4 grid lg:grid-cols-2 p-4 border border-foreground rounded-xl max-h-[35vh] overflow-y-auto scrollbar-thin scrollbar-thumb-card scrollbar-track-transparent scrollbar-thumb-green-500">
+      <div className="gap-4 space-y-4 grid lg:grid-cols-2 p-4 border border-foreground rounded-xl max-h-[50vh] overflow-y-auto scrollbar-thin scrollbar-thumb-card scrollbar-track-transparent scrollbar-thumb-green-500">
         {posts.map((post: Post) => (
           <a
             href={post.link}
