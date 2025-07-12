@@ -3,6 +3,17 @@ export type GithubActivityType =
   | "DeleteEvent"
   | "WatchEvent"
   | "CreateEvent"
+  | "PullRequestEvent"
+  | "IssuesEvent"
+  | "ForkEvent"
+  | "ReleaseEvent"
+  | "CommitCommentEvent"
+  | "IssueCommentEvent"
+  | "PullRequestReviewEvent"
+  | "PullRequestReviewCommentEvent"
+  | "GollumEvent"
+  | "PublicEvent"
+  | "MemberEvent"
   | string;
 
 export type GithubCommitAuthor = {
@@ -34,9 +45,7 @@ export type GithubActivity = {
     name: string;
     url: string;
   };
-  payload: {
-    commits: GithubCommit[]
-  },
+  payload: Record<string, any>;
   public: boolean;
   created_at: string;
 };
