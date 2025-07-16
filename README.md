@@ -2,10 +2,6 @@
 
 Project is completed, in production, and continuously integrated.
 
-## Site metadata configurations
-
-- src/lib/config.ts, which can be loaded from `getConfig()`
-
 ## Stacks (latest iteration)
 
 - [Nextjs](https://nextjs.org)
@@ -55,8 +51,8 @@ Note: I currently am not maintaining a Dockerfile for this project version, but 
 > Assuming you are deploying on a Linux-based server
 
 - Install pre-requisites, clone, install dependencies
-- Build: `yarn build`
-- Serve: `yarn start`
+- Build: `pnpm build`
+- Serve: `pnpm start`
 - Install `nginx` for reverse proxy, run with `systemctl enable --now nginx` on systemd distros.
 - Install `ufw` for firewall management, run with `sudo ufw enable`, configure to allow port 80 and 443 `sudo ufw allow http && sudo ufw allow https`.
 - Configure `nginx` to route your ports 80 and 443 to internal port `3000`, which is the default port that `Nextjs` serves.
