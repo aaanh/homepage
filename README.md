@@ -2,14 +2,24 @@
 
 Project is completed, in production, and continuously integrated.
 
+## USAGE - WEB CLIENT PROJECT
+
+There are 2 quick start scripts to get the project up and running for demo:
+
+Assuming you're in the project root
+
+- Windows: `start.bat`, execute in CLI with `start.bat`,
+- Linux: `start.sh`, execute in CLI with `bash start.sh`
+
+Please simply execute the relevant script according to your operating system.
+
 ## Site metadata configurations
 
 - src/lib/config.ts, which can be loaded from `getConfig()`
 
 ## Stacks (latest iteration)
 
-- [Nextjs](https://nextjs.org)
-- [create-t3-app](https://github.com/t3-oss/create-t3-app)
+- [Nextjs](https://nextjs.org) with TypeScript
 - [TailwindCSS](https://tailwindcss.com)
 - [Shadcn](https://ui.shadcn.com/)
 
