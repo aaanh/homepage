@@ -12,6 +12,7 @@ import {
 } from "../ui/dropdown-menu";
 import { useRouter } from "next/navigation";
 import { ModeToggle } from "../theme-switcher";
+import { ExternalLinkIcon } from "lucide-react";
 
 export default function Header() {
   const router = useRouter();
@@ -51,9 +52,18 @@ export default function Header() {
                 >
                   Education
                 </DropdownMenuItem>
-                {/* <DropdownMenuItem>
-                Volunteer, Awards, Certifications
-              </DropdownMenuItem> */}
+                <DropdownMenuItem
+                  onClick={() => {
+                    router.push("/uses");
+                  }}
+                >
+                  Gears <ExternalLinkIcon />
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href="https://photos.aaanh.com">
+                    Photos <ExternalLinkIcon />
+                  </a>
+                </DropdownMenuItem>
               </DropdownMenuGroup>
             </DropdownMenuContent>
           </DropdownMenu>

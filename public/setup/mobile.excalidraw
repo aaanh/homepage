@@ -1,0 +1,876 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {
+      "type": "rectangle",
+      "version": 224,
+      "versionNonce": 1525634799,
+      "isDeleted": false,
+      "id": "jXJnCJP8G6LqS64443wU9",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 519.74609375,
+      "y": 164.59375,
+      "strokeColor": "#1864ab",
+      "backgroundColor": "transparent",
+      "width": 237,
+      "height": 325,
+      "seed": 1401833267,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "boundElements": [
+        {
+          "type": "text",
+          "id": "LCsynBPJ7kjKiTH5Re2k3"
+        }
+      ],
+      "updated": 1663556870935,
+      "link": null,
+      "locked": false
+    },
+    {
+      "type": "text",
+      "version": 121,
+      "versionNonce": 260641665,
+      "isDeleted": false,
+      "id": "LCsynBPJ7kjKiTH5Re2k3",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 524.74609375,
+      "y": 302.09375,
+      "strokeColor": "#1864ab",
+      "backgroundColor": "transparent",
+      "width": 227,
+      "height": 50,
+      "seed": 1308946963,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "boundElements": [],
+      "updated": 1663556870935,
+      "link": null,
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "iPhone 13\n128 GB",
+      "baseline": 43,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "jXJnCJP8G6LqS64443wU9",
+      "originalText": "iPhone 13\n128 GB"
+    },
+    {
+      "type": "rectangle",
+      "version": 322,
+      "versionNonce": 315621715,
+      "isDeleted": false,
+      "id": "Pk67VKE--SBpwLHarZtnR",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 776.23828125,
+      "y": 165.7578125,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 613,
+      "height": 409,
+      "seed": 643358739,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "boundElements": [
+        {
+          "id": "FQvGrB4uFQ36katz2YaLy",
+          "type": "text"
+        },
+        {
+          "type": "text",
+          "id": "FQvGrB4uFQ36katz2YaLy"
+        }
+      ],
+      "updated": 1659403646604,
+      "link": null,
+      "locked": false
+    },
+    {
+      "type": "text",
+      "version": 247,
+      "versionNonce": 1126805853,
+      "isDeleted": false,
+      "id": "FQvGrB4uFQ36katz2YaLy",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 781.23828125,
+      "y": 320.2578125,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 603,
+      "height": 100,
+      "seed": 808656541,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "boundElements": [],
+      "updated": 1659403646604,
+      "link": null,
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "iPad Pro M1\n128 GB\n(Black)\n",
+      "baseline": 93,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "Pk67VKE--SBpwLHarZtnR",
+      "originalText": "iPad Pro M1\n128 GB\n(Black)\n"
+    },
+    {
+      "type": "rectangle",
+      "version": 162,
+      "versionNonce": 1795776065,
+      "isDeleted": false,
+      "id": "vyViiPdOPCcl8uwyjZhQ8",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 521.02734375,
+      "y": 600.32421875,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 237,
+      "height": 62,
+      "seed": 1082080797,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "boundElements": [
+        {
+          "type": "text",
+          "id": "GzqDW1k-wD31vN25o9vl0"
+        }
+      ],
+      "updated": 1663556842422,
+      "link": null,
+      "locked": false
+    },
+    {
+      "type": "text",
+      "version": 123,
+      "versionNonce": 728982095,
+      "isDeleted": false,
+      "id": "GzqDW1k-wD31vN25o9vl0",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 526.02734375,
+      "y": 606.32421875,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 227,
+      "height": 50,
+      "seed": 1835046931,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "boundElements": [],
+      "updated": 1663556842422,
+      "link": null,
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Sony WH-1000XM4\n(White)",
+      "baseline": 43,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "vyViiPdOPCcl8uwyjZhQ8",
+      "originalText": "Sony WH-1000XM4\n(White)"
+    },
+    {
+      "type": "rectangle",
+      "version": 244,
+      "versionNonce": 293349793,
+      "isDeleted": false,
+      "id": "-4gOgoGuB795W8Z8_Q4V6",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 777.42578125,
+      "y": 599.6171875,
+      "strokeColor": "#2b8a3e",
+      "backgroundColor": "transparent",
+      "width": 192.18359375,
+      "height": 148.140625,
+      "seed": 1769469885,
+      "groupIds": [
+        "OV5au-aoxio7JgsA0Xid8"
+      ],
+      "strokeSharpness": "sharp",
+      "boundElements": [],
+      "updated": 1663556818657,
+      "link": null,
+      "locked": false
+    },
+    {
+      "type": "freedraw",
+      "version": 243,
+      "versionNonce": 1928166639,
+      "isDeleted": false,
+      "id": "MsVlYzuhXQR5LxK5DaESV",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 809.78125,
+      "y": 680.92578125,
+      "strokeColor": "#2b8a3e",
+      "backgroundColor": "transparent",
+      "width": 45.26953125,
+      "height": 39.44921875,
+      "seed": 980108317,
+      "groupIds": [
+        "OV5au-aoxio7JgsA0Xid8"
+      ],
+      "strokeSharpness": "round",
+      "boundElements": [],
+      "updated": 1663556818657,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0.2578125,
+          0
+        ],
+        [
+          0.2578125,
+          -0.26171875
+        ],
+        [
+          -0.265625,
+          -0.5234375
+        ],
+        [
+          -1.57421875,
+          -2.09375
+        ],
+        [
+          -3.14453125,
+          -3.92578125
+        ],
+        [
+          -5.23828125,
+          -5.49609375
+        ],
+        [
+          -6.80859375,
+          -6.8046875
+        ],
+        [
+          -7.85546875,
+          -7.06640625
+        ],
+        [
+          -8.90234375,
+          -7.328125
+        ],
+        [
+          -9.1640625,
+          -7.328125
+        ],
+        [
+          -9.42578125,
+          -7.0703125
+        ],
+        [
+          -10.2109375,
+          -5.0078125
+        ],
+        [
+          -11.2578125,
+          -2.171875
+        ],
+        [
+          -12.3046875,
+          0.921875
+        ],
+        [
+          -12.56640625,
+          3.5
+        ],
+        [
+          -11.79296875,
+          5.8203125
+        ],
+        [
+          -11.01953125,
+          7.8828125
+        ],
+        [
+          -9.98828125,
+          9.9453125
+        ],
+        [
+          -8.69921875,
+          12.5234375
+        ],
+        [
+          -7.15234375,
+          15.359375
+        ],
+        [
+          -5.34765625,
+          17.9375
+        ],
+        [
+          -3.54296875,
+          19.2265625
+        ],
+        [
+          -2.25390625,
+          20.2578125
+        ],
+        [
+          0.12890625,
+          20.515625
+        ],
+        [
+          4.37890625,
+          20.515625
+        ],
+        [
+          12.1484375,
+          20.515625
+        ],
+        [
+          20.1171875,
+          19.4375
+        ],
+        [
+          25.5234375,
+          16.98828125
+        ],
+        [
+          28.96875,
+          13.52734375
+        ],
+        [
+          30.7734375,
+          9.8046875
+        ],
+        [
+          32.4453125,
+          4.2734375
+        ],
+        [
+          32.703125,
+          0.87109375
+        ],
+        [
+          32.703125,
+          -2.79296875
+        ],
+        [
+          31.1328125,
+          -6.98046875
+        ],
+        [
+          29.26953125,
+          -11.0234375
+        ],
+        [
+          26.65234375,
+          -14.6875
+        ],
+        [
+          24.5,
+          -17.1015625
+        ],
+        [
+          22.66796875,
+          -18.41015625
+        ],
+        [
+          21.8828125,
+          -18.671875
+        ],
+        [
+          20.57421875,
+          -18.93359375
+        ],
+        [
+          17.11328125,
+          -17.87109375
+        ],
+        [
+          12.48828125,
+          -16.32421875
+        ],
+        [
+          7.61328125,
+          -14.13671875
+        ],
+        [
+          4.67578125,
+          -12.81640625
+        ],
+        [
+          3.3671875,
+          -11.52734375
+        ],
+        [
+          2.84375,
+          -9.72265625
+        ],
+        [
+          2.58203125,
+          -7.40234375
+        ],
+        [
+          2.3203125,
+          -5.08203125
+        ],
+        [
+          2.3203125,
+          -4.30859375
+        ],
+        [
+          2.05859375,
+          -4.30859375
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "simulatePressure": true,
+      "pressures": []
+    },
+    {
+      "type": "freedraw",
+      "version": 233,
+      "versionNonce": 443043201,
+      "isDeleted": false,
+      "id": "K_Tp_EbKTJGMtDFCEBws-",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 808.8515625,
+      "y": 663.33203125,
+      "strokeColor": "#2b8a3e",
+      "backgroundColor": "transparent",
+      "width": 15.96484375,
+      "height": 26.28125,
+      "seed": 112268861,
+      "groupIds": [
+        "OV5au-aoxio7JgsA0Xid8"
+      ],
+      "strokeSharpness": "round",
+      "boundElements": [],
+      "updated": 1663556818657,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          -0.26171875
+        ],
+        [
+          -0.5234375,
+          -2.6171875
+        ],
+        [
+          -1.078125,
+          -6.66015625
+        ],
+        [
+          -1.6953125,
+          -11.9140625
+        ],
+        [
+          -0.921875,
+          -16.7421875
+        ],
+        [
+          0.65625,
+          -20.5234375
+        ],
+        [
+          2.9765625,
+          -23.140625
+        ],
+        [
+          5.0390625,
+          -24.44921875
+        ],
+        [
+          7.359375,
+          -25.7578125
+        ],
+        [
+          9.7421875,
+          -26.28125
+        ],
+        [
+          11.03125,
+          -26.28125
+        ],
+        [
+          12.0625,
+          -24.21875
+        ],
+        [
+          12.3515625,
+          -21.0625
+        ],
+        [
+          12.609375,
+          -17.1328125
+        ],
+        [
+          12.609375,
+          -14.234375
+        ],
+        [
+          11.82421875,
+          -12.6875
+        ],
+        [
+          10.77734375,
+          -11.140625
+        ],
+        [
+          8.9453125,
+          -9.59375
+        ],
+        [
+          7.375,
+          -8.8203125
+        ],
+        [
+          6.328125,
+          -7.7890625
+        ],
+        [
+          4.7578125,
+          -6.7578125
+        ],
+        [
+          2.6640625,
+          -5.2109375
+        ],
+        [
+          0.5703125,
+          -3.921875
+        ],
+        [
+          -1,
+          -3.40625
+        ],
+        [
+          -1.5234375,
+          -3.1484375
+        ],
+        [
+          -2.30859375,
+          -2.6328125
+        ],
+        [
+          -3.09375,
+          -1.6015625
+        ],
+        [
+          -3.35546875,
+          -1.34375
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "simulatePressure": true,
+      "pressures": []
+    },
+    {
+      "type": "text",
+      "version": 328,
+      "versionNonce": 1496188687,
+      "isDeleted": false,
+      "id": "qNkEEwLtz9bkCI3Jamw6c",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 855.859375,
+      "y": 654.09765625,
+      "strokeColor": "#2b8a3e",
+      "backgroundColor": "transparent",
+      "width": 92,
+      "height": 50,
+      "seed": 341763933,
+      "groupIds": [
+        "OV5au-aoxio7JgsA0Xid8"
+      ],
+      "strokeSharpness": "sharp",
+      "boundElements": [],
+      "updated": 1663556818657,
+      "link": null,
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Watch S7\n(Black)",
+      "baseline": 42,
+      "textAlign": "center",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Watch S7\n(Black)"
+    },
+    {
+      "type": "rectangle",
+      "version": 208,
+      "versionNonce": 330288339,
+      "isDeleted": false,
+      "id": "9D6M58KmAhrT8O_bos1CZ",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 987.04296875,
+      "y": 601.744140625,
+      "strokeColor": "#0b7285",
+      "backgroundColor": "transparent",
+      "width": 400,
+      "height": 147,
+      "seed": 860966067,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "boundElements": [
+        {
+          "id": "0v-xqmGjyQd--9m3OgQvV",
+          "type": "text"
+        },
+        {
+          "type": "text",
+          "id": "0v-xqmGjyQd--9m3OgQvV"
+        }
+      ],
+      "updated": 1659403714187,
+      "link": null,
+      "locked": false
+    },
+    {
+      "type": "text",
+      "version": 239,
+      "versionNonce": 429809117,
+      "isDeleted": false,
+      "id": "0v-xqmGjyQd--9m3OgQvV",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 992.04296875,
+      "y": 650.244140625,
+      "strokeColor": "#0b7285",
+      "backgroundColor": "transparent",
+      "width": 390,
+      "height": 50,
+      "seed": 1589464061,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "boundElements": [],
+      "updated": 1659403714187,
+      "link": null,
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Anker PowerCore II\n10,000 mAh",
+      "baseline": 43,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "9D6M58KmAhrT8O_bos1CZ",
+      "originalText": "Anker PowerCore II\n10,000 mAh"
+    },
+    {
+      "type": "rectangle",
+      "version": 252,
+      "versionNonce": 1408846561,
+      "isDeleted": false,
+      "id": "vV5anC9HFoDUThlsMbTw1",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 520.5921936035156,
+      "y": 684.0688781738281,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 237,
+      "height": 60,
+      "seed": 1828391695,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "boundElements": [
+        {
+          "id": "ItLKGpTBAwLW-ZsC6Uojn",
+          "type": "text"
+        },
+        {
+          "type": "text",
+          "id": "ItLKGpTBAwLW-ZsC6Uojn"
+        }
+      ],
+      "updated": 1663556839904,
+      "link": null,
+      "locked": false
+    },
+    {
+      "type": "text",
+      "version": 226,
+      "versionNonce": 1518853135,
+      "isDeleted": false,
+      "id": "ItLKGpTBAwLW-ZsC6Uojn",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 525.5921936035156,
+      "y": 701.5688781738281,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 227,
+      "height": 25,
+      "seed": 1012543841,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "boundElements": [],
+      "updated": 1663556848849,
+      "link": null,
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "AirPods Pro",
+      "baseline": 18,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "vV5anC9HFoDUThlsMbTw1",
+      "originalText": "AirPods Pro"
+    },
+    {
+      "type": "rectangle",
+      "version": 209,
+      "versionNonce": 596821953,
+      "isDeleted": false,
+      "id": "EiMbxMnsiTBSfXfMfFcRq",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 522.7921752929688,
+      "y": 509.46893310546875,
+      "strokeColor": "#756f00",
+      "backgroundColor": "transparent",
+      "width": 237,
+      "height": 62,
+      "seed": 2130508641,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "boundElements": [
+        {
+          "id": "ixc6zYqaXyLrtwdvFjht9",
+          "type": "text"
+        },
+        {
+          "type": "text",
+          "id": "ixc6zYqaXyLrtwdvFjht9"
+        }
+      ],
+      "updated": 1663556983232,
+      "link": null,
+      "locked": false
+    },
+    {
+      "type": "text",
+      "version": 190,
+      "versionNonce": 699355343,
+      "isDeleted": false,
+      "id": "ixc6zYqaXyLrtwdvFjht9",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 527.7921752929688,
+      "y": 527.9689331054688,
+      "strokeColor": "#756f00",
+      "backgroundColor": "transparent",
+      "width": 227,
+      "height": 25,
+      "seed": 938190639,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "boundElements": [],
+      "updated": 1663556983232,
+      "link": null,
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "Yubikey 5C - NFC",
+      "baseline": 18,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "EiMbxMnsiTBSfXfMfFcRq",
+      "originalText": "Yubikey 5C - NFC"
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}

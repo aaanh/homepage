@@ -122,7 +122,7 @@ export default async function Footer() {
             <li>
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center gap-1">
-                  Version {latestVersion}.0.0{" "}
+                  Version Final Project Custom{" "}
                   <ChevronDown className="w-4 h-4" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>

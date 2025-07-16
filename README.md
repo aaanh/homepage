@@ -4,7 +4,7 @@ Project is completed, in production, and continuously integrated.
 
 ## USAGE - WEB CLIENT PROJECT
 
-There are 2 quick start scripts to get the project up and running for demo:
+There are 2 quick start scripts to get the project up and running for local demo:
 
 Assuming you're in the project root
 
@@ -13,9 +13,10 @@ Assuming you're in the project root
 
 Please simply execute the relevant script according to your operating system.
 
-## Site metadata configurations
+Live site:
 
-- src/lib/config.ts, which can be loaded from `getConfig()`
+- https://final-project.aaanh.com (This custom version)
+- https://aaanh.com (Production release)
 
 ## Stacks (latest iteration)
 
