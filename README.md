@@ -4,16 +4,16 @@ Project is completed, in production, and continuously integrated.
 
 ## USAGE - WEB CLIENT PROJECT
 
-There are 2 quick start scripts to get the project up and running for local demo:
+Please follow these steps:
 
-Assuming you're in the project root
+- Install `node` (>= v20.x.y) and `npm`
+- Install `pnpm` package manager: `npm install -g pnpm`
+- Change directory to project root
+- Install dependencies: `pnpm install`
+- Run local development server: `pnpm dev`
+- Accessible at: <http://localhost:3000>
 
-- Windows: `start.bat`, execute in CLI with `start.bat`,
-- Linux: `start.sh`, execute in CLI with `bash start.sh`
-
-Please simply execute the relevant script according to your operating system.
-
-Live site:
+Live sites:
 
 - https://final-project.aaanh.com (This custom version)
 - https://aaanh.com (Production release)
