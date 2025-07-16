@@ -63,8 +63,8 @@ Note: I currently am not maintaining a Dockerfile for this project version, but 
 
 ## Major Version Deployments
 
-- Next: https://v7.aaanh.com (v7)
-- Production: https://aaanh.com (v6)
+- Production: https://aaanh.com
+- v6: https://v6.aaanh.com
 - v5: https://v5.aaanh.com
 - v4: https://v4.aaanh.com
 - v3: https://v3.aaanh.com
