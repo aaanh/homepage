@@ -27,19 +27,19 @@ Project is completed, in production, and continuously integrated.
 - All
 
 ```
-npm i -g yarn
+npm i -g pnpm
 ```
 
 - Windows
 
 ```powershell
-git clone https://github.com/aaanh/homepage; cd homepage; yarn; yarn dev
+git clone https://github.com/aaanh/homepage; cd homepage; pnpm install; pnpm dev
 ```
 
 - Linux, macOS
 
 ```sh
-git clone https://github.com/aaanh/homepage && cd homepage && yarn && yarn dev
+git clone https://github.com/aaanh/homepage && cd homepage && pnpm install && pnpm dev
 ```
 
 ## Deployment
