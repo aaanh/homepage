@@ -4,8 +4,8 @@ Project is completed, in production, and continuously integrated.
 
 ## Stacks (latest iteration)
 
-- [Nextjs](https://nextjs.org)
-- [create-t3-app](https://github.com/t3-oss/create-t3-app)
+- [Next.js](https://nextjs.org)
+- [create-next-app](https://nextjs.org/docs/app/api-reference/cli/create-next-app)
 - [TailwindCSS](https://tailwindcss.com)
 - [Shadcn](https://ui.shadcn.com/)
 
@@ -17,6 +17,26 @@ Project is completed, in production, and continuously integrated.
 
 - Cloudflare DNS
 - Cloudflare SSL
+
+### Environment variables
+
+```conf
+APPLE_MUSIC_ENDPOINT_KEY=""
+DEST_EMAIL=""
+GENIUS_ACCESS_TOKEN=""
+KV_REST_API_TOKEN=""
+KV_REST_API_URL=""
+NEXT_PUBLIC_BLOG_RSS_FEED_URL=""
+NEXT_PUBLIC_GOOGLE_SSO_CLIENT_ID=""
+NEXT_PUBLIC_MSFT_SSO_AUTHORITY=""
+NEXT_PUBLIC_MSFT_SSO_CLIENT_ID=""
+REPOSITORY_BRANCH=""
+RESEND_API_KEY=""
+SPOTIFY_CLIENT_ID=""
+SPOTIFY_CLIENT_SECRET=""
+SPOTIFY_REFRESH_TOKEN=""
+
+```
 
 ### Commands to get up and running
 
