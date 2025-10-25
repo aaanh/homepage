@@ -37,14 +37,10 @@ export default function Hero() {
             <b>{years}</b> years of experience
           </p>
           <p>
-            <b>3</b>
-            <sup>rd</sup> year student
-          </p>
-          <p>
-            <b>3</b> internships
-          </p>
-          <p>
             <b>Multiple</b> succesful projects
+          </p>
+          <p>
+            <b>Open-source</b> contributor
           </p>
         </div>
       </div>
