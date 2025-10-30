@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { ibmPlexSans } from "@/fonts";
 
 export default function Hero() {
-  const startDate = new Date("2022-01-01");
+  const startDate = new Date("2021-01-01");
   const endDate = new Date();
   const years = calculateYearsBetweenDates(startDate, endDate);
 
