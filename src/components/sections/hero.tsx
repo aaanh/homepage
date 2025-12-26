@@ -19,7 +19,14 @@ export default function Hero() {
       <div className="justify-center gap-0 grid md:grid-cols-2 p-4 lg:p-0 w-full lg:w-fit">
         <div className="justify-center lg:justify-end items-center grid grid-rows-[1fr_1fr] bg-card/80 backdrop-blur p-4 lg:p-12 min-h-44 text-right">
           <h1 className="text-4xl lg:text-6xl">Anh Hoang Nguyen</h1>
-          <p className="h-[2rem] font-mono lg:text-2xl">
+          <ul className="lg:text-2xl font-mono">
+            {[
+              "Software Developer",
+              "Solutions Architect",
+              "DevSecOps"
+            ].map((role) => <li key={role}>{role}</li>)}
+          </ul>
+          {/* <p className="h-[2rem] font-mono lg:text-2xl">
             <Typewriter
               typeSpeed={25}
               loop={0}
@@ -30,7 +37,7 @@ export default function Hero() {
                 "Solutions Architect",
               ]}
             />
-          </p>
+          </p> */}
         </div>
         <div className="flex flex-col justify-center bg-foreground/80 backdrop-blur p-4 lg:p-12 min-h-44 text-background text-lg lg:text-2xl lg:text-left">
           <p>
