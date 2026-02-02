@@ -40,7 +40,7 @@ export default async function Footer() {
             />
             <span className="text-4xl">AAANH</span>
           </div>
-          <p>&copy; 2025 Anh Hoang Nguyen</p>
+          <p>&copy; 2026 Anh Hoang Nguyen</p>
           <p>AAANH Corporation</p>
           <p>All Rights Reserved</p>
         </div>
