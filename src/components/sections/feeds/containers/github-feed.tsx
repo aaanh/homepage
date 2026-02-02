@@ -326,14 +326,14 @@ export function GithubFeed() {
 
   return (
     <div className="relative">
-      <div className="gap-4 space-y-4 grid lg:grid-cols-2 p-4 border border-foreground rounded-xl max-h-[50vh] overflow-y-auto scrollbar-thin scrollbar-thumb-card scrollbar-track-transparent scrollbar-thumb-green-500">
+      <div className="gap-4 space-y-4 grid lg:grid-cols-2 p-4 border border-foreground max-h-[50vh] overflow-y-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-green-500">
         {sortedRepos.map((repoName) => {
           const repoActivities = repoGroups[repoName];
           const isExpanded = expandedRepos[repoName];
           const visibleActivities = isExpanded ? repoActivities : repoActivities.slice(0, 3);
           return (
             <div key={repoName} className="mb-4">
-              <div className="flex items-center font-bold text-lg mb-2 text-accent bg-accent text-background p-2 font-mono">
+              <div className="flex items-center font-bold text-lg mb-2 text-foreground bg-accent p-2 font-mono">
                 <ChevronRight />
                 {repoName}
               </div>

@@ -6,6 +6,7 @@ import { GithubFeed } from "./containers/github-feed";
 import { Button } from "@/components/ui/button";
 import BlogFeed from "./containers/blog-feed";
 import PhotoFeed from "./containers/photo-feed";
+import { cn } from "@/lib/utils";
 
 export default function FeedContainer() {
   const feeds = [
@@ -26,27 +27,36 @@ export default function FeedContainer() {
   const [currentFeed, setCurrentFeed] = useState(feeds[0]);
 
   return (
-    <section className="space-y-6 p-2 px-4">
-      <div className="flex flex-col justify-center gap-4">
-        <SectionHeader title="Social Activities" />
-        <div className="flex flex-wrap gap-4">
+    <section className="py-12 min-h-screen">
+      <div className="">
+        <div className="text-center mb-2">
+          <SectionHeader 
+            title="Social Activities" 
+            className="text-3xl md:text-4xl font-bold"
+          />
+        </div>
+
+        <div className="flex flex-wrap gap-3 mb-2">
           {feeds.map((feed) => (
             <Button
               onClick={() => setCurrentFeed(feed)}
               key={feed.source + "-activity"}
-              className="min-w-32 hover:cursor-pointer"
-              variant={
-                currentFeed.source === feed.source ? "default" : "outline"
-              }
+              className={cn(`px-6 py-3 min-w-32 transition-all duration-200 ease-in-out transform hover:scale-105 font-bold rounded-none`, 
+                currentFeed.source === feed.source 
+                  ? "bg-accent text-white shadow-lg hover:bg-accent" 
+                  : "bg-background text-foreground hover:bg-accent"
+              )}
             >
               {feed.source}
             </Button>
           ))}
         </div>
 
-        {feeds.map((feed) =>
-          currentFeed.source === feed.source ? feed.component : null
-        )}
+        <div className="shadow-lg transition-all duration-300 hover:shadow-xl bg-background">
+          {feeds.map((feed) =>
+            currentFeed.source === feed.source ? feed.component : null
+          )}
+        </div>
       </div>
     </section>
   );
