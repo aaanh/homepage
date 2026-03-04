@@ -1,3 +1,7 @@
+# Repository is archived
+
+This repository has been archived as of 2026-03-03. Activities are moved to https://gitlab.com/aaanh/homepage effective immediately.
+
 # <https://aaanh.com>
 
 ## Major Version Deployments
